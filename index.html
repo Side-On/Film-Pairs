@@ -19,147 +19,155 @@
                 <header>
                     <h1>Introducing The All New Pairs Matching Film Trivia Quiz Game Challenge!</h1>
                 </header>
+                <div>
+                    <div class="welcome">
+                        <h5>What is it?</h5>
+                        <p> Great question. This isn't your average pairs game, oh no no. Here you'll have you use
+                            every bit of your
+                            memory based
+                            pair matching skills, but you'll also need to call upon your film based trivia
+                            knowledge.</p>
+                        <br>
+                        <h5>How to Play </h5>
 
-                <row>
-                    <column>
-                        <div class="welcome">
-                            <h5>What is it?</h5>
-                            <p> Great question. This isn't your average pairs game, oh no no. Here you'll have you use
-                                every bit of your
-                                memory based
-                                pair matching skills, but you'll also need to call upon your film based trivia
-                                knowledge.</p>
-                            <br>
-                            <h5>How to Play </h5>
+                        <p>All you have to do it match the film quote to the film. Easy.
 
-                            <p>All you have to do it match the film quote to the film. Easy.
+                            Click on any of the cards to reveal the quote or image behind it. Then try to find the
+                            matching film or
+                            quote.
+                            The game is timed and you'll receive bonus points for how quickly you complete the game.
+                            Be careful though, you'll also lose marks depending on how many attempts you take.
+                        </p>
+                        <br>
+                        <button class="play-button" onclick="play()">Let's Play!</button>
 
-                                Click on any of the cards to reveal the quote or image behind it. Then try to find the
-                                matching film or
-                                quote.
-                                The game is timed and you'll receive bonus points for how quickly you complete the game.
-                                Be careful though, you'll also lose marks depending on how many attempts you take.
-                            </p>
-                            <br>
-                            <button class="play-button" onclick="play()">Let's Play!</button>
+                        <button class="restart-button" onclick="restart()">Restart</button>
+                    </div>
 
-                            <button class="restart-button" onclick="restart()">Restart</button>
+                    <div class="game-container">
+                        <div class="game-info-container">
+                            <div class="game-info">
+                                Time 00:00
+                            </div>
+                            <div class="game-info">
+                                Matches 0/0
+                            </div>
+
+                            <div class="game-info">
+                                Current Score: 0
+                            </div>
+                            <div class="game-info">
+                                Top Score: 0
+                            </div>
                         </div>
-
-                    </column>
-                    <column>
-                        <div class="play-area">
-                            <div class="card">
-                                <div class="car-front">
-
-                                </div>
-                                <div class="card-back"></div>
+                        <div class="card" onclick="flip(event)">
+                            
+                                <img class=" card-front card-image" src="assets/images/card-ill-be-back.png">
+                                <img class="card-back card-image" src="assets/images/card-back.png">
                             </div>
-                            <div class="card">
-                                <div class="car-front">
-
-                                </div>
-                                <div class="card-back"></div>
-                            </div>
-                            <div class="card">
-                                <div class="car-front">
-
-                                </div>
-                                <div class="card-back"></div>
-                            </div>
-                            <div class="card">
-                                <div class="car-front">
-
-                                </div>
-                                <div class="card-back"></div>
-                            </div>
-                            <div class="card">
-                                <div class="car-front">
-
-                                </div>
-                                <div class="card-back"></div>
-                            </div>
-                            <div class="card">
-                                <div class="car-front">
-
-                                </div>
-                                <div class="card-back"></div>
-                            </div>
-                            <div class="card">
-                                <div class="car-front">
-
-                                </div>
-                                <div class="card-back"></div>
-                            </div>
-                            <div class="card">
-                                <div class="car-front">
-
-                                </div>
-                                <div class="card-back"></div>
-                            </div>
-                            <div class="card">
-                                <div class="car-front">
-
-                                </div>
-                                <div class="card-back"></div>
-                            </div>
-                            <div class="card">
-                                <div class="car-front">
-
-                                </div>
-                                <div class="card-back"></div>
-                            </div>
-                            <div class="card">
-                                <div class="car-front">
-
-                                </div>
-                                <div class="card-back"></div>
-                            </div>
-                            <div class="card">
-                                <div class="car-front">
-
-                                </div>
-                                <div class="card-back"></div>
-                            </div>
-                            <div class="card">
-                                <div class="car-front">
-
-                                </div>
-                                <div class="card-back"></div>
-                            </div>
-                            <div class="card">
-                                <div class="car-front">
-
-                                </div>
-                                <div class="card-back"></div>
-                            </div>
-                            <div class="card">
-                                <div class="car-front">
-
-                                </div>
-                                <div class="card-back"></div>
-                            </div>
-                            <div class="card">
-                                <div class="car-front">
-
-                                </div>
-                                <div class="card-back"></div>
-                            </div>
-
+                        <div class="card" onclick="flip(event)">
+                            <div class="card-front">
+                                <img class="card-image" src="assets/images/terminator.png"></div>
+                            <div class="card-back">
+                                <img class="card-image" src="assets/images/card-back.png"></div>
                         </div>
-                    </column>
-                </row>
+                        <div class="card">
 
+                            <div class="card-back"></div>
+                        </div>
+                        <div class="card">
+                            <div class="car-front">
 
+                            </div>
+                            <div class="card-back"></div>
+                        </div>
+                        <div class="card">
+                            <div class="car-front">
 
+                            </div>
+                            <div class="card-back"></div>
+                        </div>
+                        <div class="card">
+                            <div class="car-front">
+
+                            </div>
+                            <div class="card-back"></div>
+                        </div>
+                        <div class="card">
+                            <div class="car-front">
+
+                            </div>
+                            <div class="card-back"></div>
+                        </div>
+                        <div class="card">
+                            <div class="car-front">
+
+                            </div>
+                            <div class="card-back"></div>
+                        </div>
+                        <div class="card">
+                            <div class="car-front">
+
+                            </div>
+                            <div class="card-back"></div>
+                        </div>
+                        <div class="card">
+                            <div class="car-front">
+
+                            </div>
+                            <div class="card-back"></div>
+                        </div>
+                        <div class="card">
+                            <div class="car-front">
+
+                            </div>
+                            <div class="card-back"></div>
+                        </div>
+                        <div class="card">
+                            <div class="car-front">
+
+                            </div>
+                            <div class="card-back"></div>
+                        </div>
+                        <div class="card">
+                            <div class="car-front">
+
+                            </div>
+                            <div class="card-back"></div>
+                        </div>
+                        <div class="card">
+                            <div class="car-front">
+
+                            </div>
+                            <div class="card-back"></div>
+                        </div>
+                        <div class="card">
+                            <div class="car-front">
+
+                            </div>
+                            <div class="card-back"></div>
+                        </div>
+                        <div class="card">
+                            <div class="car-front">
+
+                            </div>
+                            <div class="card-back"></div>
+                        </div>
+                        <div class="card">
+                            <div class="car-front">
+
+                            </div>
+                            <div class="card-back"></div>
+                        </div>
+                    </div>
+</div>
+</div>
+                </div>
             </div>
-        </div>
-    </div>
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
