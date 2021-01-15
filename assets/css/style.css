@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
 
-
 body {
     text-align: center;
     padding: 50px;
@@ -38,9 +37,13 @@ button {
 .game-container {
     display: grid;
     grid-template-columns: repeat(4,auto);
-    grid-gap: 5px;
-    width: 60%;
+    grid-gap: 10px;
+    width: 40%;
     padding: 20px 30px;
+    text-align: center;
+    position: inherit;
+    margin: 0 auto;
+    perspective: 500px;
 }
 
 .game-info-container {
@@ -50,10 +53,48 @@ button {
 
 }
 .card {
-    height: 150px;
-    width: 100px;
-    display: inline-flex;
+    background-color: black;
+    height: 125px;
+    width: 104px;
+    border-color: transparent;
+    position: relative;
+    margin: 0;
+    border: 1px solid #FFDA66;    
+    border-radius: 20px;
+  transition: transform 1s;
+  transform-style: preserve-3d;
 }
+
+.card-image {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 20px;
+    backface-visibility: hidden;
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+
+}
+
+.card:hover {
+    box-shadow: 0px 0px 20px 1px rgb(255, 196, 21);
+    cursor: pointer;
+}
+
+.card-front {
+    transform: rotateY(180deg);
+}
+
+.card-back {
+    transform: rotateY(0);   
+}
+
+
 
 /* Moving Stars Background */
 
