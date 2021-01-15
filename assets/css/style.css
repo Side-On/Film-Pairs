@@ -16,7 +16,7 @@ header {
 
 .welcome {
     padding: 50px;
-    width: 50%;
+    width: 40%;
 
 }
 
@@ -32,6 +32,24 @@ button {
   font-size: 16px;
   margin: 6px 10px;
   cursor: pointer;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    grid-gap: 10px;
+}
+
+.game-info-container {
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: space-between;
+
+}
+.card {
+    height: 100px;
+    width: 70px;
+    display: inline-flex;
 }
 
 /* Moving Stars Background */
