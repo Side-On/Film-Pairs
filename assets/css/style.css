@@ -15,8 +15,9 @@ header {
 }
 
 .welcome {
-    padding: 50px;
     width: 40%;
+    float: left;
+    padding: 30px;
 
 }
 
@@ -37,7 +38,9 @@ button {
 .game-container {
     display: grid;
     grid-template-columns: repeat(4,auto);
-    grid-gap: 10px;
+    grid-gap: 5px;
+    width: 60%;
+    padding: 20px 30px;
 }
 
 .game-info-container {
@@ -47,8 +50,8 @@ button {
 
 }
 .card {
-    height: 100px;
-    width: 70px;
+    height: 150px;
+    width: 100px;
     display: inline-flex;
 }
 
