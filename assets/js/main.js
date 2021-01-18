@@ -19,7 +19,6 @@ function flipCard() {
     }
 
     secondCard = this;
-    cardFlipped = false;
     lockBoard = true;
     checkMatch();
 }
@@ -43,6 +42,7 @@ function unFlipCards() {
     setTimeout(() => {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
+        resetBoard();
     }, 1500);
 }
 
