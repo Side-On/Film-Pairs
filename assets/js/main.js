@@ -1,54 +1,64 @@
-const cards = document.querySelectorAll('.card');  
+const cards = document.querySelectorAll('.card');
 
 var cardFlipped = false;
-var firstCard, secondCard;
+var firstCard;
+var secondCard;
+var lockBoard = false;
 
 /* Card flip function */
-    function flipCard() {
-        this.classList.add('flip')
+function flipCard() {
+    if(lockBoard) return;
 
-        if (!cardFlipped) {
-            cardFlipped = true;
-            firstCard = this;
-            return;
-        }
+    this.classList.add('flip');
 
-        secondCard = this;
-        cardFlipped = false;
-
-        checkForMatch();
+    if (!cardFlipped) {
+        cardFlipped = true;
+        firstCard = this;
+        return;
     }
 
-    function checkForMatch() {
-        if (firstCard.dataset.framework == secondCard.dataset.framework) {
-            disableCards();
-            return;
-        }
-        unFlipCards();
-    }
+    secondCard = this;
+    cardFlipped = false;
+    lockBoard = true;
+    checkMatch();
+}
 
-    function disableCards() {
-        firstCard.removeEventListener('click', flipCard);
-        secondCard.removeEventListener('click',flipCard);
+function checkMatch() {
+    if (firstCard.dataset.framework === secondCard.dataset.framework) {
+        disableCards();
+        return;
     }
+    unFlipCards();
+}
+
+function disableCards() {
+    firstCard.removeEventListener('click', flipCard);
+    secondCard.removeEventListener('click', flipCard);
+}
 
 function unflipCards() {
-   setTimeout(() => {
-     firstCard.classList.remove('flip');
-     secondCard.classList.remove('flip');
-   }, 1500);
- }
+    lockBoard = true;
+
+    setTimeout(() => {
+        firstCard.classList.remove('flip');
+        secondCard.classList.remove('flip');
+
+        lockBoard = false;
+    }, 1500);
+}
 
 
- function shuffle() {
-  cards.forEach(card => {
-    let randomPos = Math.floor(Math.random() * 12);
-    card.style.order = randomPos;
-  });
+function shuffle() {
+    cards.forEach(card => {
+        let randomPos = Math.floor(Math.random() * 12);
+        card.style.order = randomPos;
+    });
 }
 cards.forEach(card => card.addEventListener('click', flipCard));
 
+function lockBoard() {
 
+}
 
 
 
