@@ -34,6 +34,7 @@ function checkMatch() {
 function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
+    resetBoard();
 }
 
 function unFlipCards() {
@@ -43,6 +44,7 @@ function unFlipCards() {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
         resetBoard();
+        lockBoard = false;
     }, 1500);
 }
 
