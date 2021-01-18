@@ -5,9 +5,10 @@ var firstCard;
 var secondCard;
 var lockBoard = false;
 
+
 /* Card flip function */
 function flipCard() {
-    if(lockBoard) return;
+    if (lockBoard) return;
     if (this === firstCard) return;
 
     this.classList.add('flip');
@@ -49,8 +50,8 @@ function unFlipCards() {
 }
 
 function resetBoard() {
-[cardFlipped, lockBoard] = [false, false];
-[firstCard, secondCard] = [null, null];
+    [cardFlipped, lockBoard] = [false, false];
+    [firstCard, secondCard] = [null, null];
 }
 
 (function shuffle() {
@@ -59,5 +60,20 @@ function resetBoard() {
         card.style.order = randomPos;
     });
 })();
-cards.forEach(card => card.addEventListener('click', flipCard));
 
+// Get the container element
+//var btnContainer = document.getElementById("difficulty-settings");
+
+// Get all buttons with class="difficulty-button" inside the container
+var btns = document.getElementsByClassName("difficulty-button");
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+cards.forEach(card => card.addEventListener('click', flipCard));
