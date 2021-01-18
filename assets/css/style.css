@@ -21,38 +21,12 @@ header {
 
 }
 
-.level {
-    padding: 20px 40px;
+.difficulty-button {
+    padding: 20px 30px;
     display: inline;
     border: none;
+    font-size: 25px;
 
-}
-
-a {
-    font-size: 1.0rem;
-  color:#FFDA66;
-  -moz-transition: all 0.2s ease-in;
-  -o-transition: all 0.2s ease-in;
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
-}
-
-a:link {
-  text-decoration: none;
-}
-
-a:visited {
-  text-decoration: none;
-  color: #f5db16;
-}
-
-a:hover {
-  color: #fdec6e;
-  text-shadow:0px 0px 30px #fdec6e;
-  -moz-transition: all 0.2s ease-in;
-  -o-transition: all 0.2s ease-in;
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
 }
 
 button {
@@ -63,9 +37,16 @@ button {
   padding: 15px 32px;
   text-align: center;
   display: inline-block;
-  font-size: 16px;
-  margin: 6px 10px;
+  font-size: 30px;
   cursor: pointer;
+  outline: none;
+}
+
+.active, .difficulty-button:hover {
+    color: rgb(255, 191, 0);
+    text-decoration: bold;
+    font-size: 35px;
+    font-weight: bolder;
 }
 
 .game-container {
