@@ -5,7 +5,6 @@ var firstCard;
 var secondCard;
 var lockBoard = false;
 
-
 /* Card flip function */
 function flipCard() {
     if (lockBoard) return;
@@ -61,19 +60,23 @@ function resetBoard() {
     });
 })();
 
-// Get the container element
-//var btnContainer = document.getElementById("difficulty-settings");
-
 // Get all buttons with class="difficulty-button" inside the container
 var btns = document.getElementsByClassName("difficulty-button");
 
 // Loop through the buttons and add the active class to the current/clicked button
 for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
+    btns[i].addEventListener("click", function () {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+    });
+}
+
+document.getElementById("restart-button").addEventListener("click", restartGame);
+
+function restartGame() {
+  location.reload(document.getElementsByClassName('.game-container'));
+  return false;
 }
 
 cards.forEach(card => card.addEventListener('click', flipCard));
