@@ -13,6 +13,23 @@
 </head>
 
 <body>
+    <div id="game-completed" class="overlay">
+        <div class="overlay-text">
+            <h1>Congratulations!</h1>
+            <br>
+            <p>The game has been Completed!</p>
+            <br>
+            <p>Your results are as follows:</p>
+            <div class="results">
+                <p>Time:</p><span id="time-taken-review">00:00</span>
+                <p>Matches made: 0/</p><span id="matches-made-review">0</span>
+                <p>Difficulty Completed:</p><span id="difficulty-setting-review"></span>
+            </div>
+
+        </div>
+        <br>
+        <button id="close-overlay" onclick="closeOverlay()">Close and Restart the Game!</button>
+    </div>
     <div class="stars">
         <div class="twinkling">
             <div class="clouds">
@@ -40,39 +57,34 @@
                         </p>
                         <br>
                         <h4>Choose your difficulty!</h4>
-                            <div class="difficulty-settings">
-                                <button class="difficulty-button level active">Easy</button>
-                                <button class="difficulty-button level">Medium</button>
-                                <button class="difficulty-button level">Hard</button>
-                            </div>
-                        <button class="play-button">Let's Play!</button>
-
-                        <button class="restart-button">Restart</button>
+                        <div class="difficulty-settings">
+                            <button class="difficulty-button level active">Easy</button>
+                            <button class="difficulty-button level">Medium</button>
+                            <button class="difficulty-button level">Hard</button>
+                        </div>
+                        <button id="restart-button" onclick="restartGame()">Restart the Game</button>
                     </div>
 
-                    <div class="game-container">
+                    <div id="game-container">
                         <div class="game-info-container">
-                            <div class="timer">
-                                Time 00:00
+                            <div class="game-time-info">
+                                Time <span id="timer"> 00:00 </span>
                             </div>
                             <div class="matches">
-                                Matches 0/0
+                                Matches: <span id="matches-made"> 0 </span>
                             </div>
 
                             <div class="current-score">
-                                Current Score: 0
-                            </div>
-                            <div class="top-score">
-                                Top Score: 0
+                                Current Score: <span id="score">0</span>
                             </div>
                         </div>
 
-                        <div class="card" data-framework = "terminator">
+                        <div class="card" data-framework="terminator">
                             <img class="card-front" src="assets/images/card-ill-be-back.png">
                             <img class="card-back" src="assets/images/card-back.png">
                         </div>
 
-                        <div class="card" data-framework = "terminator">
+                        <div class="card" data-framework="terminator">
                             <img class="card-front" src="assets/images/terminator.png">
                             <img class="card-back" src="assets/images/card-back.png">
                         </div>
@@ -146,11 +158,6 @@
                             <img class="card-front" src="assets/images/royale-with-cheese.png">
                             <img class="card-back" src="assets/images/card-back.png">
                         </div>
-
-
-
-
-                        
                     </div>
                 </div>
             </div>
