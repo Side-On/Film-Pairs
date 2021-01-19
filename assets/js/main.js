@@ -8,7 +8,6 @@ var timerOn = true;
 var counter = document.getElementById('timer');
 
 
-
 /* Card flip function */
 function flipCard() {
 
@@ -109,7 +108,28 @@ var counter2 = document.getElementById("matches-made");
 function countCounter(){ 
       count++;
       counter2.innerHTML = count;
+
+// This brings up the overlay to say that it is the end of the game
+      if(count == 8){
+          gameCompleted();
+      }
 }
+
+function gameCompleted() {
+        document.getElementById('game-completed').style.display = "block"
+    }
+
+
+function closeOverlay() {
+  document.getElementById("game-completed").style.display = "none";
+  restartGame();
+}
+
+// Refreshes the web page
+function restartGame() {
+    location.reload();
+}
+
 
 // Function to add active status to the difficulty button
 var buttons = document.getElementsByClassName("difficulty-button");
@@ -120,12 +140,6 @@ for (var i = 0; i < buttons.length; i++) {
         current[0].className = current[0].className.replace(" active", "");
         this.className += " active";
     });
-}
-
-
-
-function restartGame() {
-    location.reload();
 }
 
 
