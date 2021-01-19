@@ -4,9 +4,15 @@ var cardFlipped = false;
 var firstCard;
 var secondCard;
 var lockBoard = false;
+var timerOn = true;
 
 /* Card flip function */
 function flipCard() {
+
+    if (timerOn === true) {
+        startTimer();
+        timerOn = false;
+    }
     if (lockBoard) return;
     if (this === firstCard) return;
 
@@ -60,16 +66,37 @@ function resetBoard() {
     });
 })();
 
-// Get all buttons with class="difficulty-button" inside the container
-var btns = document.getElementsByClassName("difficulty-button");
+//Timer Function
 
-// Loop through the buttons and add the active class to the current/clicked button
-for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function () {
+var time = 0;
+var timer;
+var minutes;
+var seconds;
+
+function startTimer() {
+  timer = setInterval(function () {
+    time++;
+    minutes = ("0" + Math.floor(time / 60)).slice(-2);
+    seconds = ("0" + (time % 60)).slice(-2);
+    document.getElementById("timer").innerHTML = minutes + ":" + seconds;
+  }, 1000);
+}
+
+// Function to add active status to the difficulty button
+var buttons = document.getElementsByClassName("difficulty-button");
+
+for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", function () {
         var current = document.getElementsByClassName("active");
         current[0].className = current[0].className.replace(" active", "");
         this.className += " active";
     });
+}
+/*
+let gameContainer = document.querySelector("#game-container");
+*/
+function restartGame() {
+    location.reload();
 }
 
 cards.forEach(card => card.addEventListener('click', flipCard));
