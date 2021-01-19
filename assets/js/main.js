@@ -48,6 +48,7 @@ function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
     countCounter();
+    totalScore();
     resetBoard();
 }
 
@@ -93,6 +94,14 @@ function startTimer() {
   }, 1000);
 }
 
+// Score
+var score = 0;
+var scoreKeeper = document.getElementById("score");
+
+function totalScore() {
+    score = score + 100;
+    scoreKeeper.innerHTML = score;
+}
 //count the matches
 var count = 0;
 var counter2 = document.getElementById("matches-made");
