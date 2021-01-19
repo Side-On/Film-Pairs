@@ -72,11 +72,4 @@ for (var i = 0; i < btns.length; i++) {
     });
 }
 
-document.getElementById("restart-button").addEventListener("click", restartGame);
-
-function restartGame() {
-  location.reload(document.getElementsByClassName('.game-container'));
-  return false;
-}
-
 cards.forEach(card => card.addEventListener('click', flipCard));
