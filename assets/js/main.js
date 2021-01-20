@@ -116,14 +116,8 @@ function matchCounter(){
 }
 
 function gameCompleted() {
-        document.getElementById('game-completed').style.display = "block"
+        document.getElementById('game-completed-overlay').style.display = "block"
     }
-
-
-function closeOverlay() {
-  document.getElementById("game-completed").style.display = "none";
-  restartGame();
-}
 
 // Refreshes the web page
 function restartGame() {
