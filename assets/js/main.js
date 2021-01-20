@@ -33,6 +33,7 @@ function flipCard() {
 function checkMatch() {
     if (firstCard.dataset.framework === secondCard.dataset.framework) {
         disableCards();
+        currentScore();
         return;
 
     }
@@ -45,7 +46,6 @@ function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
     matchCounter();
-    totalScore();
     resetBoard();
     gameCompleted();
 }
@@ -95,16 +95,26 @@ function startTimer() {
 // Score
 var score = 0;
 var scoreKeeper = document.getElementById("current-score");
+var totalScore = 0;
 
-function totalScore() {
+function currentScore() {
 
     score = score + 100;
-    
-    if (timer >= "30") {
-        score = score * 0.5;
-        scoreKeeper.innerHTML = score;
-    }
+    scoreKeeper.innerHTML = score;
+}
 
+function totalScoreCalculated() {
+    if (timer < "60") {
+        totalScore = score + 56;
+    }
+}
+    /*
+    if (timeFinished < "00:45") {
+        totalScoreCalculated = score + 55;
+        scoreKeeper.innerHTML = score;
+        
+    }
+/*
     else if (timer >= "10" && timer < "30") {
 
         score = score * 1.5;
@@ -118,8 +128,7 @@ function totalScore() {
     }
 
     else (score = score)
-
-}
+*/
 
 
 //count the matches
@@ -141,7 +150,7 @@ function gameCompleted() {
 
         document.getElementById('time-taken').innerHTML = timeFinished;
         document.getElementById('matches-completed').innerHTML = completeMatches;
-        document.getElementById('total-score').innerHTML = totalScore;
+        document.getElementById('total-score').innerHTML = totalScoreCalculated;
         document.getElementById('game-completed-overlay').style.display = "block";
     }
 }
