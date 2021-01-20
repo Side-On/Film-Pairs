@@ -49,6 +49,7 @@ function disableCards() {
     matchCounter();
     totalScore();
     resetBoard();
+    gameCompleted();
 }
 
 
@@ -85,12 +86,12 @@ var minutes;
 var seconds;
 
 function startTimer() {
-  timer = setInterval(function () {
-    time++;
-    minutes = ("0" + Math.floor(time / 60)).slice(-2);
-    seconds = ("0" + (time % 60)).slice(-2);
-    document.getElementById("timer").innerHTML = minutes + ":" + seconds;
-  }, 1000);
+    timer = setInterval(function () {
+        time++;
+        minutes = ("0" + Math.floor(time / 60)).slice(-2);
+        seconds = ("0" + (time % 60)).slice(-2);
+        document.getElementById("timer").innerHTML = minutes + ":" + seconds;
+    }, 1000);
 }
 
 // Score
@@ -105,20 +106,34 @@ function totalScore() {
 var match = 0;
 var matchesMade = document.getElementById("matches-made");
 
-function matchCounter(){ 
-      match++;
-      matchesMade.innerHTML = match;
-
-// This brings up the overlay to say that it is the end of the game
-      if(match == 8){
-          gameCompleted();
-      }
+function matchCounter() {
+    match++;
+    matchesMade.innerHTML = match;
 }
+// This brings up the overlay to say that it is the end of the game
+/*if (match == 1) {
+    gameCompleted();
 
+    var timeFinished = document.getElementById('timer').innerHTML;
+    var completeMatches = document.getElementById('matches-made').innerHTML;
+
+    document.getElementById('time-taken').innerHTML = timeFinished;
+    document.getElementById('matches-completed').innerHTML = completeMatches;
+}
+}
+*/
 function gameCompleted() {
-        document.getElementById('game-completed-overlay').style.display = "block"
-    }
 
+    if (match == 1) {
+
+        var timeFinished = document.getElementById('timer').innerHTML;
+        var completeMatches = document.getElementById('matches-made').innerHTML;
+        
+        document.getElementById('time-taken').innerHTML = timeFinished;
+        document.getElementById('matches-completed').innerHTML = completeMatches;
+        document.getElementById('game-completed-overlay').style.display = "block";
+    }
+}
 // Refreshes the web page
 function restartGame() {
     location.reload();
@@ -135,6 +150,8 @@ for (var i = 0; i < buttons.length; i++) {
         this.className += " active";
     });
 }
+
+// Function to add time, score and difficulty setting to overlay
 
 
 cards.forEach(card => card.addEventListener('click', flipCard));
