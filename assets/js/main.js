@@ -97,9 +97,31 @@ var score = 0;
 var scoreKeeper = document.getElementById("current-score");
 
 function totalScore() {
+
     score = score + 100;
-    scoreKeeper.innerHTML = score;
+    
+    if (timer >= "30") {
+        score = score * 0.5;
+        scoreKeeper.innerHTML = score;
+    }
+
+    else if (timer >= "10" && timer < "30") {
+
+        score = score * 1.5;
+        scoreKeeper.innerHTML = score;
+    }
+
+    else if (timer >= "0" && timer <= "9") {
+
+        score = score * 2;
+        scoreKeeper.innerHTML = score;
+    }
+
+    else (score = score)
+
 }
+
+
 //count the matches
 var match = 0;
 var matchesMade = document.getElementById("matches-made");
