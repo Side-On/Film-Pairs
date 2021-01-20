@@ -14,7 +14,7 @@ header {
     padding: 30px;
 }
 
-.overlay {
+#game-completed-overlay {
   position: fixed; /* Sit on top of the page content */
   /*display: none;/* Hidden by default */
   width: 100%; /* Full width (cover the whole page) */
@@ -25,18 +25,33 @@ header {
   bottom: 0;
   background-color: rgba(0,0,0,0.8); /* Black background with opacity */
   z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
+}
+
+.message-box {
+    width: 500px;
+    height: 500px;
 }
 
 .overlay-text{
   position: absolute;
   top: 50%;
   left: 50%;
-  font-size: 50px;
+  font-size: 30px;
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
 }
 
+.results {
+    font-size: 20px;
+}
+
+.reviews {
+    display: inline;
+}
+
+#close-overlay {
+    font-size: 25px;
+}
 .show{
     visibility: visible !important;
     opacity: 1 !important;
@@ -65,7 +80,6 @@ button {
   color: #FFDA66;
   padding: 15px 32px;
   text-align: center;
-  display: inline;
   font-size: 30px;
   cursor: pointer;
   outline: 0px solid #da8301!important;
