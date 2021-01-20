@@ -13,22 +13,21 @@
 </head>
 
 <body>
-    <div id="game-completed" class="overlay">
+    <div id="game-completed-overlay">
         <div class="overlay-text">
             <h1>Congratulations!</h1>
             <br>
             <p>The game has been Completed!</p>
             <br>
-            <p>Your results are as follows:</p>
+            <p>Your results:</p>
             <div class="results">
-                <p>Time:</p><span id="time-taken-review">00:00</span>
-                <p>Matches made: 0/</p><span id="matches-made-review">0</span>
-                <p>Difficulty Completed:</p><span id="difficulty-setting-review"></span>
+                <p>Time: <span id="time-taken-review">00:00</span></p>
+                <p>Matches made: 0/<span id="matches-made-review">0</span></p>
+                <p>Difficulty Completed: <span id="difficulty-setting-review">Easy</span></p>
             </div>
-
-        </div>
-        <br>
+            <br>
         <button id="close-overlay" onclick="closeOverlay()">Close and Restart the Game!</button>
+    </div>
     </div>
     <div class="stars">
         <div class="twinkling">
