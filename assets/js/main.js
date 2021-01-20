@@ -46,7 +46,7 @@ function checkMatch() {
 function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
-    countCounter();
+    matchCounter();
     totalScore();
     resetBoard();
 }
@@ -102,15 +102,15 @@ function totalScore() {
     scoreKeeper.innerHTML = score;
 }
 //count the matches
-var count = 0;
-var counter2 = document.getElementById("matches-made");
+var match = 0;
+var matchesMade = document.getElementById("matches-made");
 
-function countCounter(){ 
-      count++;
-      counter2.innerHTML = count;
+function matchCounter(){ 
+      match++;
+      matchesMade.innerHTML = match;
 
 // This brings up the overlay to say that it is the end of the game
-      if(count == 8){
+      if(match == 8){
           gameCompleted();
       }
 }
