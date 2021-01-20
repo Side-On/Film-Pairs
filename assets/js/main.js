@@ -5,8 +5,6 @@ var firstCard;
 var secondCard;
 var lockBoard = false;
 var timerOn = true;
-var counter = document.getElementById('timer');
-
 
 /* Card flip function */
 function flipCard() {
@@ -96,7 +94,7 @@ function startTimer() {
 
 // Score
 var score = 0;
-var scoreKeeper = document.getElementById("score");
+var scoreKeeper = document.getElementById("current-score");
 
 function totalScore() {
     score = score + 100;
@@ -110,27 +108,18 @@ function matchCounter() {
     match++;
     matchesMade.innerHTML = match;
 }
-// This brings up the overlay to say that it is the end of the game
-/*if (match == 1) {
-    gameCompleted();
 
-    var timeFinished = document.getElementById('timer').innerHTML;
-    var completeMatches = document.getElementById('matches-made').innerHTML;
-
-    document.getElementById('time-taken').innerHTML = timeFinished;
-    document.getElementById('matches-completed').innerHTML = completeMatches;
-}
-}
-*/
 function gameCompleted() {
 
     if (match == 1) {
 
         var timeFinished = document.getElementById('timer').innerHTML;
         var completeMatches = document.getElementById('matches-made').innerHTML;
-        
+        var totalScore = document.getElementById('current-score').innerHTML;
+
         document.getElementById('time-taken').innerHTML = timeFinished;
         document.getElementById('matches-completed').innerHTML = completeMatches;
+        document.getElementById('total-score').innerHTML = totalScore;
         document.getElementById('game-completed-overlay').style.display = "block";
     }
 }
@@ -138,7 +127,6 @@ function gameCompleted() {
 function restartGame() {
     location.reload();
 }
-
 
 // Function to add active status to the difficulty button
 var buttons = document.getElementsByClassName("difficulty-button");
