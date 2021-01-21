@@ -96,6 +96,7 @@ function startTimer() {
 var score = 0;
 var scoreKeeper = document.getElementById("current-score");
 var totalScore = document.getElementById('total-score');
+var timeBonus = document.getElementById('time-bonus');
 
 //Gives current score and calculates totalScore
 function currentScore() {
@@ -104,6 +105,7 @@ function currentScore() {
 
     if (time >= 31) {
     totalScore.innerHTML = score * 1;
+    timeBonus.innerHTML = "x1";
     }
 
     else if (time >= 21 && time <= 30) {
@@ -116,6 +118,7 @@ function currentScore() {
 
     else if (time >= 1 && time <= 10) {
         totalScore.innerHTML = score * 4;
+    timeBonus.innerHTML = "x4";
     }
 
 }
