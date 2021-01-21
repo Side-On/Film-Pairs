@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
 
 body {
+    background-color: black;
     text-align: center;
     padding: 50px;
-    background-color: black;
     color:#FFDA66;
     font-family: "Karla", sans-serif;
     font-size: 1.0rem;
@@ -152,7 +152,25 @@ button {
 }
 
 
+@media (max-width:990px) {
 
+    .welcome {
+        width: 100%;
+    }
+
+    #game-container {
+        width: 60%;
+    }
+
+}
+
+@media (max-width:625px) {
+    .card {
+        height: 90px;
+        width: 75px;
+    }
+
+}
 /* Moving Stars Background */
 
 /* ============================================================================================== 
