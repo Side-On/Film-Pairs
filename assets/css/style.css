@@ -14,7 +14,7 @@ header {
 
 #game-completed-overlay {
   position: fixed; /* Sit on top of the page content */
-  /*display: none;/* Hidden by default */
+  display: none;/* Hidden by default */
   width: 100%; /* Full width (cover the whole page) */
   height: 100%; /* Full height (cover the whole page) */
   top: 0;
@@ -88,7 +88,7 @@ header {
 }
 
 .difficulty-button {
-    padding: 20px 30px;
+    padding: 20px 20px;
     display: inline;
     border: none;
     font-size: 25px;
@@ -101,9 +101,9 @@ button {
   background-color: transparent;
   border: 2px solid #FFDA66;
   color: #FFDA66;
-  padding: 15px 32px;
+  padding: 15px 25px;
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
   cursor: pointer;
   outline: 0px solid #da8301!important;
 }
@@ -115,7 +115,7 @@ button {
 .active, .difficulty-button:hover {
     color: rgb(255, 191, 0);
     text-decoration: bold;
-    font-size: 35px;
+    font-size: 28px;
     font-weight: bolder;
 }
 
@@ -173,7 +173,6 @@ button {
 .card-front {
   transform: rotateY(180deg);
 }
-
 
 @media (max-width:990px) {
 
