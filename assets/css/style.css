@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    padding-top: 20px;
+    padding: 20px 20px;
 }
 
 #game-completed-overlay {
@@ -62,7 +62,7 @@ header {
 .welcome {
     width: 40%;
     float: left;
-    padding: 30px;
+    padding: 0px 20px;
 
 }
 
@@ -103,7 +103,6 @@ button {
     grid-template-columns: repeat(4,auto);
     grid-gap: 10px;
     width: 40%;
-    padding: 20px 30px;
     text-align: center;
     position: inherit;
     margin: 0 auto;
@@ -119,8 +118,8 @@ button {
 }
 .card {
     background-color: black;
-    height: 125px;
-    width: 104px;
+    height: 130px;
+    width: 108px;
     border-color: transparent;
     position: relative;
     margin: 0;
@@ -163,14 +162,22 @@ button {
 
     #game-container {
         width: 70%;
+        padding-top: 20px;
     }
 
 }
 
-@media (max-width:625px) {
+@media (max-width:705px) {
+
         body {
     font-size: 0.7rem;
 }
+
+
+    #game-container {
+        width: 60%;
+    }
+
 
 h1 {
     font-size: 1.2rem;
@@ -205,6 +212,24 @@ button {
     font-size: 1.2rem;
 }
 
+}
+
+@media (max-width: 610px) {
+
+        body {
+    font-size: 0.7rem;
+}
+
+
+    #game-container {
+        width: 60%;
+    }
+
+    
+    .card {
+        height: 75px;
+        width: 62px;
+    }
 }
 /* Moving Stars Background */
 
