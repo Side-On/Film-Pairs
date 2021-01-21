@@ -48,6 +48,7 @@ function disableCards() {
     matchCounter();
     resetBoard();
     gameCompleted();
+    totalScoreCalculator();
 }
 
 
@@ -95,17 +96,21 @@ function startTimer() {
 // Score
 var score = 0;
 var scoreKeeper = document.getElementById("current-score");
-var totalScore = 0;
+var totalScore = document.getElementById("total-score");
 
 function currentScore() {
-
     score = score + 100;
     scoreKeeper.innerHTML = score;
 }
 
-function totalScoreCalculated() {
-    if (timer < "60") {
-        totalScore = score + 56;
+function totalScoreCalculator() {
+    
+    if (timer > "00:02") {
+    totalScore.innerHTML = score + 20;
+    }
+
+    else if (timer < "1") {
+        totalScore.innerHTML = score + 30;
     }
 }
     /*
@@ -146,12 +151,11 @@ function gameCompleted() {
 
         var timeFinished = document.getElementById('timer').innerHTML;
         var completeMatches = document.getElementById('matches-made').innerHTML;
-        var totalScore = document.getElementById('current-score').innerHTML;
 
         document.getElementById('time-taken').innerHTML = timeFinished;
         document.getElementById('matches-completed').innerHTML = completeMatches;
-        document.getElementById('total-score').innerHTML = totalScoreCalculated;
         document.getElementById('game-completed-overlay').style.display = "block";
+
     }
 }
 // Refreshes the web page
