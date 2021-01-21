@@ -3,15 +3,13 @@
 body {
     background-color: black;
     text-align: center;
-    padding: 50px;
     color:#FFDA66;
     font-family: "Karla", sans-serif;
     font-size: 1.0rem;
-    display: flex;
 }
 
 header {
-    padding: 30px;
+    padding-top: 20px;
 }
 
 #game-completed-overlay {
@@ -158,6 +156,7 @@ button {
 
 @media (max-width:990px) {
 
+
     .welcome {
         width: 100%;
     }
@@ -169,10 +168,42 @@ button {
 }
 
 @media (max-width:625px) {
+        body {
+    font-size: 0.7rem;
+}
+
+h1 {
+    font-size: 1.2rem;
+}
+
+h2 {
+    font-size: 0.9rem;
+}
+
+h3 {
+    font-size: 0.8rem;
+}
     .card {
         height: 90px;
         width: 75px;
     }
+
+    .difficulty-button {
+    font-size: 0.7rem;
+
+}
+
+button {
+    font-size: 0.5rem;
+}
+
+#restart-button {
+    font-size: 1rem;
+}
+
+.active, .difficulty-button:hover {
+    font-size: 1.2rem;
+}
 
 }
 /* Moving Stars Background */
