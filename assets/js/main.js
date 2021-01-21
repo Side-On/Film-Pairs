@@ -125,30 +125,6 @@ function currentScore() {
 
 }
 
-/*
-if (timeFinished < "00:45") {
-    totalScoreCalculated = score + 55;
-    scoreKeeper.innerHTML = score;
-    
-}
-/*
-else if (timer >= "10" && timer < "30") {
-
-    score = score * 1.5;
-    scoreKeeper.innerHTML = score;
-}
-
-else if (timer >= "0" && timer <= "9") {
-
-    score = score * 2;
-    scoreKeeper.innerHTML = score;
-}
-
-else (score = score)
-*/
-
-
-//count the matches
 var match = 0;
 var matchesMade = document.getElementById("matches-made");
 
@@ -159,7 +135,7 @@ function matchCounter() {
 
 function gameCompleted() {
 
-    if (match == 1) {
+    if (match == 8) {
 
         var timeFinished = document.getElementById('timer').innerHTML;
         var completeMatches = document.getElementById('matches-made').innerHTML;
