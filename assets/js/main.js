@@ -103,24 +103,29 @@ function currentScore() {
     score = score + 100;
     scoreKeeper.innerHTML = score;
 
-    if (time >= 31) {
+    if (time >= 41) {
     totalScore.innerHTML = score * 1;
     timeBonus.innerHTML = "x1";
     }
+    
+    else if (time >= 31 && time <= 40) {
+        totalScore.innerHTML = score * 1.3;
+    timeBonus.innerHTML = "x1.3";
+    }
 
     else if (time >= 21 && time <= 30) {
-        totalScore.innerHTML = score * 2;
-    timeBonus.innerHTML = "x2";
+        totalScore.innerHTML = score * 1.5;
+    timeBonus.innerHTML = "x1.5";
     }
 
     else if (time >= 11 && time <= 20 ) {
-        totalScore.innerHTML = score * 3;
-    timeBonus.innerHTML = "x3";
+        totalScore.innerHTML = score * 1.7;
+    timeBonus.innerHTML = "x1.7";
     }
 
     else if (time >= 1 && time <= 10) {
-        totalScore.innerHTML = score * 4;
-    timeBonus.innerHTML = "x4";
+        totalScore.innerHTML = score * 2;
+    timeBonus.innerHTML = "x2";
     }
 
 }
