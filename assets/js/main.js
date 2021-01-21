@@ -110,10 +110,12 @@ function currentScore() {
 
     else if (time >= 21 && time <= 30) {
         totalScore.innerHTML = score * 2;
+    timeBonus.innerHTML = "x2";
     }
 
     else if (time >= 11 && time <= 20 ) {
         totalScore.innerHTML = score * 3;
+    timeBonus.innerHTML = "x3";
     }
 
     else if (time >= 1 && time <= 10) {
