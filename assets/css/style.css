@@ -43,6 +43,15 @@ header {
     font-size: 20px;
 }
 
+.time-bonus-text {
+    font-size: 14px;
+}
+
+#time-bonus {
+    text-decoration: bold;
+    font-size: 16px;
+}
+
 .reviews {
     display: inline;
 }
