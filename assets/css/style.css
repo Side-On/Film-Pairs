@@ -62,7 +62,7 @@ header {
 .welcome {
     width: 40%;
     float: left;
-    padding: 0px 20px;
+    padding: 10px 20px;
 
 }
 
@@ -107,6 +107,7 @@ button {
     position: inherit;
     margin: 0 auto;
     perspective: 500px;
+    padding-top: 10px;
 }
 
 .game-info-container {
@@ -162,7 +163,6 @@ button {
 
     #game-container {
         width: 70%;
-        padding-top: 20px;
     }
 
 }
