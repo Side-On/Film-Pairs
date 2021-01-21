@@ -39,6 +39,14 @@ header {
   -ms-transform: translate(-50%,-50%);
 }
 
+.congrats-overlay {
+    font-size: 2.34375rem;
+}
+
+.game-completed-overlay {
+    font-size: 1.875rem;
+}
+
 .results {
     font-size: 20px;
 }
