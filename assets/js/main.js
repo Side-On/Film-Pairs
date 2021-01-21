@@ -33,7 +33,6 @@ function flipCard() {
 function checkMatch() {
     if (firstCard.dataset.framework === secondCard.dataset.framework) {
         disableCards();
-        currentScore();
         return;
 
     }
@@ -48,7 +47,7 @@ function disableCards() {
     matchCounter();
     resetBoard();
     gameCompleted();
-    totalScoreCalculator();
+    currentScore();
 }
 
 
@@ -96,43 +95,51 @@ function startTimer() {
 // Score
 var score = 0;
 var scoreKeeper = document.getElementById("current-score");
-var totalScore = document.getElementById("total-score");
+var totalScore = document.getElementById('total-score');
 
+//Gives current score and calculates totalScore
 function currentScore() {
     score = score + 100;
     scoreKeeper.innerHTML = score;
-}
 
-function totalScoreCalculator() {
-    
-    if (timer > "00:02") {
-    totalScore.innerHTML = score + 20;
+    if (time >= 31) {
+    totalScore.innerHTML = score * 1;
     }
 
-    else if (timer < "1") {
-        totalScore.innerHTML = score + 30;
+    else if (time >= 21 && time <= 30) {
+        totalScore.innerHTML = score * 2;
     }
+
+    else if (time >= 11 && time <= 20 ) {
+        totalScore.innerHTML = score * 3;
+    }
+
+    else if (time >= 1 && time <= 10) {
+        totalScore.innerHTML = score * 4;
+    }
+
 }
-    /*
-    if (timeFinished < "00:45") {
-        totalScoreCalculated = score + 55;
-        scoreKeeper.innerHTML = score;
-        
-    }
+
 /*
-    else if (timer >= "10" && timer < "30") {
+if (timeFinished < "00:45") {
+    totalScoreCalculated = score + 55;
+    scoreKeeper.innerHTML = score;
+    
+}
+/*
+else if (timer >= "10" && timer < "30") {
 
-        score = score * 1.5;
-        scoreKeeper.innerHTML = score;
-    }
+    score = score * 1.5;
+    scoreKeeper.innerHTML = score;
+}
 
-    else if (timer >= "0" && timer <= "9") {
+else if (timer >= "0" && timer <= "9") {
 
-        score = score * 2;
-        scoreKeeper.innerHTML = score;
-    }
+    score = score * 2;
+    scoreKeeper.innerHTML = score;
+}
 
-    else (score = score)
+else (score = score)
 */
 
 
@@ -155,7 +162,6 @@ function gameCompleted() {
         document.getElementById('time-taken').innerHTML = timeFinished;
         document.getElementById('matches-completed').innerHTML = completeMatches;
         document.getElementById('game-completed-overlay').style.display = "block";
-
     }
 }
 // Refreshes the web page
