@@ -1,4 +1,4 @@
-const cards = document.querySelectorAll('.card');
+const cards = document.querySelectorAll(".card");
 
 var cardFlipped = false;
 var firstCard;
@@ -16,7 +16,7 @@ function flipCard() {
     if (lockBoard) return;
     if (this === firstCard) return;
 
-    this.classList.add('flip');
+    this.classList.add("flip");
 
     if (!cardFlipped) {
         cardFlipped = true;
@@ -42,8 +42,8 @@ function checkMatch() {
 
 //Disables the cards that have been selected so they cannot be selected again
 function disableCards() {
-    firstCard.removeEventListener('click', flipCard);
-    secondCard.removeEventListener('click', flipCard);
+    firstCard.removeEventListener("click", flipCard);
+    secondCard.removeEventListener("click", flipCard);
     matchCounter();
     resetBoard();
     gameCompleted();
@@ -55,8 +55,8 @@ function unFlipCards() {
     lockBoard = true;
 
     setTimeout(() => {
-        firstCard.classList.remove('flip');
-        secondCard.classList.remove('flip');
+        firstCard.classList.remove("flip");
+        secondCard.classList.remove("flip");
         resetBoard();
         lockBoard = false;
     }, 1500);
@@ -95,8 +95,8 @@ function startTimer() {
 // Score
 var score = 0;
 var scoreKeeper = document.getElementById("current-score");
-var totalScore = document.getElementById('total-score');
-var timeBonus = document.getElementById('time-bonus');
+var totalScore = document.getElementById("total-score");
+var timeBonus = document.getElementById("time-bonus");
 
 //Gives current score and calculates totalScore
 function currentScore() {
@@ -104,28 +104,28 @@ function currentScore() {
     scoreKeeper.innerHTML = score;
 
     if (time >= 51) {
-    totalScore.innerHTML = score * 1;
-    timeBonus.innerHTML = "x1";
+        totalScore.innerHTML = score * 1;
+        timeBonus.innerHTML = "x1";
     }
-    
+
     else if (time >= 41 && time <= 50) {
         totalScore.innerHTML = score * 1.3;
-    timeBonus.innerHTML = "x1.3";
+        timeBonus.innerHTML = "x1.3";
     }
 
     else if (time >= 31 && time <= 40) {
         totalScore.innerHTML = score * 1.5;
-    timeBonus.innerHTML = "x1.5";
+        timeBonus.innerHTML = "x1.5";
     }
 
     else if (time >= 21 && time <= 30) {
         totalScore.innerHTML = score * 1.7;
-    timeBonus.innerHTML = "x1.7";
+        timeBonus.innerHTML = "x1.7";
     }
 
     else if (time >= 1 && time <= 20) {
         totalScore.innerHTML = score * 2;
-    timeBonus.innerHTML = "x2";
+        timeBonus.innerHTML = "x2";
     }
 
 }
@@ -142,15 +142,15 @@ function gameCompleted() {
 
     if (match == 8) {
 
-        var timeFinished = document.getElementById('timer').innerHTML;
-        var completeMatches = document.getElementById('matches-made').innerHTML;
+        var timeFinished = document.getElementById("timer").innerHTML;
+        var completeMatches = document.getElementById("matches-made").innerHTML;
 
-        document.getElementById('time-taken').innerHTML = timeFinished;
-        document.getElementById('matches-completed').innerHTML = completeMatches;
-        document.getElementById('game-completed-overlay').style.display = "block";
+        document.getElementById("time-taken").innerHTML = timeFinished;
+        document.getElementById("matches-completed").innerHTML = completeMatches;
+        document.getElementById("game-completed-overlay").style.display = "block";
     }
 }
-// Refreshes the web page
+// Refreshes the web page 
 function restartGame() {
     location.reload();
 }
@@ -166,7 +166,20 @@ for (var i = 0; i < buttons.length; i++) {
     });
 }
 
-// Function to add time, score and difficulty setting to overlay
+function easyDifficultySetting() {
+    //var easy = document.querySelectorAll("card");
+    //var i;
 
+    //for (i = 0; i < 8; i++) {
 
-cards.forEach(card => card.addEventListener('click', flipCard));
+        //easy.class +- ("hide-card");
+        
+//}
+  var x, i;
+  x = document.querySelectorAll(".easy");
+  for (i = 0; i < 9; i++) {
+    x[i].classList.add("hide-card");
+  }
+}
+
+cards.forEach(card => card.addEventListener("click", flipCard));
