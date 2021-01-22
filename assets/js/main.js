@@ -167,19 +167,14 @@ for (var i = 0; i < buttons.length; i++) {
 }
 
 function easyDifficultySetting() {
-    //var easy = document.querySelectorAll("card");
-    //var i;
-
-    //for (i = 0; i < 8; i++) {
-
-        //easy.class +- ("hide-card");
-        
-//}
   var x, i;
-  x = document.querySelectorAll(".easy");
-  for (i = 0; i < 9; i++) {
+  //gameContainer = document.getElementById("game-container");
+
+  x = document.querySelectorAll(".card");
+  for (i = 0; i < 8; i++) {
     x[i].classList.add("hide-card");
-  }
+    document.getElementById("game-container").style.grid-template-columns ; "repeat(4,auto)";
+}
 }
 
 cards.forEach(card => card.addEventListener("click", flipCard));
