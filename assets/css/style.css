@@ -126,16 +126,28 @@ button {
     width: 40%;
     text-align: center;
     position: inherit;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     perspective: 500px;
     padding-top: 10px;
 }
+
+/*.game-container-easy {
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-gap: 10px;
+    width: 30%;
+    text-align: center;
+    position: inherit;
+    margin: 0 auto;
+    perspective: 500px;
+    padding-top: 10px;
+}*/
 
 .game-info-container {
     grid-column: 1/-1;
     display: flex;
     justify-content: space-between;
-    margin-right: 20px;
 
 }
 .card {
@@ -144,13 +156,17 @@ button {
     width: 108px;
     border-color: transparent;
     position: relative;
-    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
     border: 1px solid #FFDA66;    
     border-radius: 20px;
   transition: transform 1s;
   transform-style: preserve-3d;
 }
 
+.hide-card {
+    display: none;
+}
 
 .card-front, .card-back {
   position: absolute;
@@ -194,10 +210,6 @@ button {
 }
 
 
-    #game-container {
-        width: 60%;
-    }
-
 
 h1 {
     font-size: 1.2rem;
@@ -238,14 +250,7 @@ button {
 
         body {
     font-size: 0.7rem;
-}
-
-
-    #game-container {
-        width: 60%;
-    }
-
-    
+}    
     .card {
         height: 75px;
         width: 62px;
