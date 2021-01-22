@@ -167,14 +167,16 @@ for (var i = 0; i < buttons.length; i++) {
 }
 
 function easyDifficultySetting() {
-  var x, i;
-  //gameContainer = document.getElementById("game-container");
+    var x, i;
+    gameContainer = document.getElementById("game-container");
 
-  x = document.querySelectorAll(".card");
-  for (i = 0; i < 8; i++) {
-    x[i].classList.add("hide-card");
-    document.getElementById("game-container").style.grid-template-columns ; "repeat(4,auto)";
-}
+    x = document.querySelectorAll(".card");
+    for (i = 0; i < 12; i++) {
+        x[i].classList.add("hide-card");
+    //gameContainer.classList.add("game-container-easy");
+    gameContainer.style.gridTemplateColumns = "repeat(2,auto)";
+    }
+
 }
 
 cards.forEach(card => card.addEventListener("click", flipCard));
