@@ -1,325 +1,295 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
-
-body {
-    background-color: black;
-    text-align: center;
-    color:#FFDA66;
-    font-family: "Karla", sans-serif;
-    font-size: 1.0rem;
+ body {
+     background-color: black;
+     text-align: center;
+     color:#FFDA66;
+     font-family: "Karla", sans-serif;
+     font-size: 1rem;
 }
-
-header {
-    padding: 20px 20px;
+ header {
+     padding: 20px 20px;
 }
-
-#game-completed-overlay {
-  position: fixed; /* Sit on top of the page content */
-  display: none;/* Hidden by default */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.8); /* Black background with opacity */
-  z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
-}
-
-.message-box {
-    width: 500px;
-    height: 500px;
-}
-
-.overlay-text{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 30px;
-  transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-}
-
-.congrats-overlay {
-    font-size: 2.34375rem;
-}
-
-.game-completed-overlay {
-    font-size: 1.875rem;
-}
-
-.results {
-    font-size: 20px;
-}
-
-.total-score-message {
-    font-size: 38px;
-}
-
-.time-bonus-text {
-    font-size: 14px;
-}
-
-#time-bonus {
-    text-decoration: bold;
-    font-size: 16px;
-}
-
-.reviews {
-    display: inline;
-}
-
-#close-overlay {
-    font-size: 25px;
-}
-.show{
-    visibility: visible !important;
-    opacity: 1 !important;
-}
-
-.content {
-    padding: 0px 20px;
-}
-
-.welcome {
-    width: 40%;
-    float: left;
-    padding: 10px 20px;
-
-}
-
-.difficulty-button {
-    padding: 20px 20px;
-    display: inline;
-    border: none;
-    font-size: 25px;
-    outline-width: 0px;
-
-}
-
-button {
-    
-  background-color: transparent;
-  border: 2px solid #FFDA66;
-  color: #FFDA66;
-  padding: 15px 25px;
-  text-align: center;
-  font-size: 20px;
-  cursor: pointer;
-  outline: 0px solid #da8301!important;
-}
-
-#restart-button {
-    font-size: 20px;
-}
-
-.active, .difficulty-button:hover {
-    color: rgb(255, 191, 0);
-    text-decoration: bold;
-    font-size: 28px;
-    font-weight: bolder;
-}
-
-#game-container {
-    display: grid;
-    grid-template-columns: repeat(4,auto);
-    grid-gap: 10px;
-    width: 40%;
-    text-align: center;
-    position: inherit;
-    margin-left: auto;
-    margin-right: auto;
-    perspective: 500px;
-    padding-top: 10px;
-}
-
-.game-info-container {
-    grid-column: 1/-1;
-    display: flex;
-    justify-content: space-between;
-
-}
-.card {
-    background-color: black;
-    height: 130px;
-    width: 108px;
-    border-color: transparent;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid #FFDA66;    
-    border-radius: 20px;
-  transition: transform 1s;
-  transform-style: preserve-3d;
-}
-
-.hide-card {
+ #game-completed-overlay {
+     position: fixed;
+    /* Sit on top of the page content */
     display: none;
+    /* Hidden by default */
+     width: 100%;
+    /* Full width (cover the whole page) */
+     height: 100%;
+    /* Full height (cover the whole page) */
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-color: rgba(0,0,0,0.8);
+    /* Black background with opacity */
+     z-index: 1;
+    /* Specify a stack order in case you're using a different order for other elements */
+}
+ .message-box {
+     width: 500px;
+     height: 500px;
+}
+ .overlay-text{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     font-size: 30px;
+     transform: translate(-50%,-50%);
+     -ms-transform: translate(-50%,-50%);
+}
+ .congrats-overlay {
+     font-size: 2.3rem;
+}
+ .game-completed-overlay {
+     font-size: 1.8rem;
+}
+ .results {
+     font-size: 20px;
+}
+ .total-score-message {
+     font-size: 38px;
+}
+ .time-bonus-text {
+     font-size: 14px;
+}
+ #time-bonus {
+     font-size: 16px;
+     font-weight: 600;
+}
+ .reviews {
+     display: inline;
+}
+ #close-overlay {
+     font-size: 25px;
+}
+ .show{
+     visibility: visible !important;
+     opacity: 1 !important;
+}
+ .content {
+     padding: 5px 20px;
+}
+ .welcome {
+     width: 40%;
+     float: left;
+     padding: 10px 20px;
+}
+ .difficulty-button {
+     padding: 20px 20px;
+     display: inline;
+     border: none;
+     font-size: 25px;
+     outline-width: 0px;
+}
+ button {
+     background-color: transparent;
+     border: 2px solid #FFDA66;
+     color: #FFDA66;
+     padding: 15px 25px;
+     text-align: center;
+     font-size: 20px;
+     cursor: pointer;
+     outline: 0px solid #da8301!important;
+}
+ #restart-button {
+     font-size: 20px;
+     margin: 20px;
 }
 
-.card-front, .card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
+ #game-container {
+     display: grid;
+     grid-template-columns: repeat(4,auto);
+     grid-gap: 10px;
+     width: 40%;
+     text-align: center;
+     position: inherit;
+     margin-left: auto;
+     margin-right: auto;
+     margin-bottom: 20px;
+     perspective: 500px;
+     padding-top: 10px;
 }
-
-.card:hover {
-    box-shadow: 0px 0px 20px 1px rgb(255, 196, 21);
-    cursor: pointer;
+ .game-info-container {
+     grid-column: 1/-1;
+     display: flex;
+     justify-content: space-between;
 }
-
-.card.flip {
-    transform: rotateY(180deg);
+ .card {
+     background-color: black;
+     height: 130px;
+     width: 108px;
+     border-color: transparent;
+     position: relative;
+     margin-left: auto;
+     margin-right: auto;
+     border: 1px solid #FFDA66;
+     border-radius: 20px;
+     transition: transform 1s;
+     transform-style: preserve-3d;
 }
-
-.card-front {
-  transform: rotateY(180deg);
+ .card-front, .card-back {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     border-radius: 20px;
+     -webkit-backface-visibility: hidden;
+    /* Safari */
+     backface-visibility: hidden;
 }
-
-@media (max-width:990px) {
-
-
-    .welcome {
-        width: 100%;
+ .card:hover {
+     box-shadow: 0px 0px 20px 1px rgb(255, 196, 21);
+     cursor: pointer;
+}
+ .card.flip {
+     transform: rotateY(180deg);
+}
+ .card-front {
+     transform: rotateY(180deg);
+}
+ @media (max-width:990px) {
+     .welcome {
+         width: 100%;
     }
-
-    #game-container {
-        width: 70%;
+     #game-container {
+         width: 70%;
     }
-
 }
-
-@media (max-width:705px) {
-
-        body {
-    font-size: 0.7rem;
-}
-
-
-
-h1 {
-    font-size: 1.2rem;
-}
-
-h2 {
-    font-size: 0.9rem;
-}
-
-h3 {
-    font-size: 0.8rem;
-}
-    .card {
-        height: 90px;
-        width: 75px;
+ @media (max-width:705px) {
+     body {
+         font-size: 0.7rem;
     }
-
-    .difficulty-button {
-    font-size: 0.7rem;
-
+     h1 {
+         font-size: 1.2rem;
+    }
+     h2 {
+         font-size: 0.9rem;
+    }
+     h3 {
+         font-size: 0.8rem;
+    }
+     .card {
+         height: 90px;
+         width: 75px;
+    }
+     .difficulty-button {
+         font-size: 0.7rem;
+    }
+     button {
+         font-size: 0.5rem;
+    }
+     #restart-button {
+         font-size: 1rem;
+    }
+     .active, .difficulty-button:hover {
+         font-size: 1.2rem;
+    }
 }
-
-button {
-    font-size: 0.5rem;
-}
-
-#restart-button {
-    font-size: 1rem;
-}
-
-.active, .difficulty-button:hover {
-    font-size: 1.2rem;
-}
-
-}
-
-@media (max-width: 610px) {
-
-        body {
-    font-size: 0.7rem;
-}    
-    .card {
-        height: 75px;
-        width: 62px;
+ @media (max-width: 610px) {
+     body {
+         font-size: 0.7rem;
+    }
+     .card {
+         height: 75px;
+         width: 62px;
     }
 }
 /* Moving Stars Background */
-
-/* ============================================================================================== 
-SED Innovations
-https://sed.am
-https://mkrtchyan.ga
-================================================================================================= */
-
-@keyframes move-twink-back {
-    from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
+/* ============================================================================================== SED Innovations https://sed.am https://mkrtchyan.ga ================================================================================================= */
+ @keyframes move-twink-back {
+     from {
+        background-position:0 0;
+    }
+     to {
+        background-position:-10000px 5000px;
+    }
 }
-@-webkit-keyframes move-twink-back {
-    from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
+ @-webkit-keyframes move-twink-back {
+     from {
+        background-position:0 0;
+    }
+     to {
+        background-position:-10000px 5000px;
+    }
 }
-@-moz-keyframes move-twink-back {
-    from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
+ @-moz-keyframes move-twink-back {
+     from {
+        background-position:0 0;
+    }
+     to {
+        background-position:-10000px 5000px;
+    }
 }
-@-ms-keyframes move-twink-back {
-    from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
+ @-ms-keyframes move-twink-back {
+     from {
+        background-position:0 0;
+    }
+     to {
+        background-position:-10000px 5000px;
+    }
 }
-
-@keyframes move-clouds-back {
-    from {background-position:0 0;}
-    to {background-position:10000px 0;}
+ @keyframes move-clouds-back {
+     from {
+        background-position:0 0;
+    }
+     to {
+        background-position:10000px 0;
+    }
 }
-@-webkit-keyframes move-clouds-back {
-    from {background-position:0 0;}
-    to {background-position:10000px 0;}
+ @-webkit-keyframes move-clouds-back {
+     from {
+        background-position:0 0;
+    }
+     to {
+        background-position:10000px 0;
+    }
 }
-@-moz-keyframes move-clouds-back {
-    from {background-position:0 0;}
-    to {background-position:10000px 0;}
+ @-moz-keyframes move-clouds-back {
+     from {
+        background-position:0 0;
+    }
+     to {
+        background-position:10000px 0;
+    }
 }
-@-ms-keyframes move-clouds-back {
-    from {background-position: 0;}
-    to {background-position:10000px 0;}
+ @-ms-keyframes move-clouds-back {
+     from {
+        background-position: 0;
+    }
+     to {
+        background-position:10000px 0;
+    }
 }
-
-.stars, .twinkling, .clouds {
-    position: absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  width:100%;
-  height:100%;
-  display:block;
+ .stars, .twinkling, .clouds {
+     position: absolute;
+     top:0;
+     left:0;
+     right:0;
+     bottom:0;
+     width:100%;
+     height:100%;
+     display:block;
 }
-
-.stars {
-  background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
-  z-index:0;
+ .stars {
+     background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+     z-index:0;
 }
-
-.twinkling{
-  background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
-  z-index:1;
-
-  -moz-animation:move-twink-back 200s linear infinite;
-  -ms-animation:move-twink-back 200s linear infinite;
-  -o-animation:move-twink-back 200s linear infinite;
-  -webkit-animation:move-twink-back 200s linear infinite;
-  animation:move-twink-back 200s linear infinite;
+ .twinkling{
+     background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+     z-index:1;
+     -moz-animation:move-twink-back 200s linear infinite;
+     -ms-animation:move-twink-back 200s linear infinite;
+     -o-animation:move-twink-back 200s linear infinite;
+     -webkit-animation:move-twink-back 200s linear infinite;
+     animation:move-twink-back 200s linear infinite;
 }
-
-.clouds{
-    background:transparent url(http://www.script-tutorials.com/demos/360/images/clouds3.png) repeat top center;
-    z-index:3;
-
-  -moz-animation:move-clouds-back 200s linear infinite;
-  -ms-animation:move-clouds-back 200s linear infinite;
-  -o-animation:move-clouds-back 200s linear infinite;
-  -webkit-animation:move-clouds-back 200s linear infinite;
-  animation:move-clouds-back 200s linear infinite;
+ .clouds{
+     background:transparent url(http://www.script-tutorials.com/demos/360/images/clouds3.png) repeat top center;
+     z-index:3;
+     -moz-animation:move-clouds-back 200s linear infinite;
+     -ms-animation:move-clouds-back 200s linear infinite;
+     -o-animation:move-clouds-back 200s linear infinite;
+     -webkit-animation:move-clouds-back 200s linear infinite;
+     animation:move-clouds-back 200s linear infinite;
 }
