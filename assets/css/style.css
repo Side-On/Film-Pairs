@@ -195,6 +195,13 @@
          width: 62px;
     }
 }
+
+@media (max-width: 450px) {
+    #game-container {
+         width: 90%;
+    }
+
+}
 /* Moving Stars Background */
 /* ============================================================================================== SED Innovations https://sed.am https://mkrtchyan.ga ================================================================================================= */
  @keyframes move-twink-back {
