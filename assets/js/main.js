@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 const cards = document.querySelectorAll(".card");
 
 var cardFlipped = false;
@@ -48,10 +50,6 @@ function disableCards() {
     resetBoard();
     gameCompleted();
     currentScore();
-
-    if (document.querySelectorAll(".active")) {   
-    gameCompletedEasy();
-    }
 }
 
 
@@ -75,7 +73,7 @@ function resetBoard() {
 //Shuffles the cards to random position everytime the page refreshed or Restart button is pressed
 (function shuffle() {
     cards.forEach(card => {
-        let randomPos = Math.floor(Math.random() * 12);
+        var randomPos = Math.floor(Math.random() * 12);
         card.style.order = randomPos;
     });
 })();
@@ -88,7 +86,7 @@ var minutes;
 var seconds;
 
 function startTimer() {
-    timer = setInterval(function () {
+    timer = setInterval(function() {
         time++;
         minutes = ("0" + Math.floor(time / 60)).slice(-2);
         seconds = ("0" + (time % 60)).slice(-2);
@@ -110,24 +108,16 @@ function currentScore() {
     if (time >= 51) {
         totalScore.innerHTML = score * 1;
         timeBonus.innerHTML = "x1";
-    }
-
-    else if (time >= 41 && time <= 50) {
+    } else if (time >= 41 && time <= 50) {
         totalScore.innerHTML = score * 1.3;
         timeBonus.innerHTML = "x1.3";
-    }
-
-    else if (time >= 31 && time <= 40) {
+    } else if (time >= 31 && time <= 40) {
         totalScore.innerHTML = score * 1.5;
         timeBonus.innerHTML = "x1.5";
-    }
-
-    else if (time >= 21 && time <= 30) {
+    } else if (time >= 21 && time <= 30) {
         totalScore.innerHTML = score * 1.7;
         timeBonus.innerHTML = "x1.7";
-    }
-
-    else if (time >= 1 && time <= 20) {
+    } else if (time >= 1 && time <= 20) {
         totalScore.innerHTML = score * 2;
         timeBonus.innerHTML = "x2";
     }
@@ -144,21 +134,7 @@ function matchCounter() {
 
 function gameCompleted() {
 
-
-
     if (match == 8) {
-
-        var timeFinished = document.getElementById("timer").innerHTML;
-        var completeMatches = document.getElementById("matches-made").innerHTML;
-
-        document.getElementById("time-taken").innerHTML = timeFinished;
-        document.getElementById("matches-completed").innerHTML = completeMatches;
-        document.getElementById("game-completed-overlay").style.display = "block";
-    }
-}
-function gameCompletedEasy() {
-
-    if (match == 2) {
 
         var timeFinished = document.getElementById("timer").innerHTML;
         var completeMatches = document.getElementById("matches-made").innerHTML;
@@ -177,53 +153,11 @@ function restartGame() {
 var buttons = document.getElementsByClassName("difficulty-button");
 
 for (var i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener("click", function () {
+    buttons[i].addEventListener("click", function() {
         var current = document.getElementsByClassName("active");
         current[0].className = current[0].className.replace(" active", "");
         this.className += " active";
     });
 }
-
-function difficultySettingEasy() {
-
-    var x, i;
-    gameContainer = document.getElementById("game-container");
-
-    x = document.querySelectorAll(".card");
-    for (i = 0; i < 12; i++) {
-        x[i].classList.add("hide-card");
-        gameContainer.style.gridTemplateColumns = "repeat(2,auto)";
-    }
-}
-
-
-function difficultySettingMedium() {
-    var x, i;
-    gameContainer = document.getElementById("game-container");
-
-    x = document.querySelectorAll(".card");
-    for (i = 0; i < 10; i++) {
-        x[i].classList.add("hide-card");
-    //gameContainer.classList.add("game-container-easy");
-    gameContainer.style.gridTemplateColumns = "repeat(3,auto)";
-    }
-
-}
-
-function difficultySettingHard() {
-    var x, i;
-    gameContainer = document.getElementById("game-container");
-
-    x = document.querySelectorAll(".card");
-    for (i = 0; i < 1; i++) {
-        x[i].classList.add("hide-card");
-    //gameContainer.classList.add("game-container-easy");
-    gameContainer.style.gridTemplateColumns = "repeat(4,auto)";
-    }
-
-}
-
-
-
 
 cards.forEach(card => card.addEventListener("click", flipCard));
