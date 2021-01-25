@@ -1,5 +1,4 @@
 /*jshint esversion: 6 */
-
 const cards = document.querySelectorAll(".card");
 
 var cardFlipped = false;
@@ -105,19 +104,19 @@ function currentScore() {
     score = score + 100;
     scoreKeeper.innerHTML = score;
 
-    if (time >= 51) {
+    if (time >= 56) {
         totalScore.innerHTML = score * 1;
         timeBonus.innerHTML = "x1";
-    } else if (time >= 41 && time <= 50) {
+    } else if (time >= 46 && time <= 55) {
         totalScore.innerHTML = score * 1.3;
         timeBonus.innerHTML = "x1.3";
-    } else if (time >= 31 && time <= 40) {
+    } else if (time >= 36 && time <= 45) {
         totalScore.innerHTML = score * 1.5;
         timeBonus.innerHTML = "x1.5";
-    } else if (time >= 21 && time <= 30) {
+    } else if (time >= 26 && time <= 35) {
         totalScore.innerHTML = score * 1.7;
         timeBonus.innerHTML = "x1.7";
-    } else if (time >= 1 && time <= 20) {
+    } else if (time >= 1 && time <= 25) {
         totalScore.innerHTML = score * 2;
         timeBonus.innerHTML = "x2";
     }
