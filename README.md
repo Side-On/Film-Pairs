@@ -48,3 +48,25 @@ The following wireframe designs were created before the project began. They were
 game layout. The final design is shown below to keep the UX as simple as possible to make it accessible and useable by a wide range of people of all ages. 
 
 Instructions are shown on the left hand sign, making them the most likely to be read first. Large fonts are given to the headings of each paragraph to draw attention on first visit to the page.
+
+### Features
+
+This is a simple card memory trivia game. There is only one webpage created to contain both the instructions and game itself. The design is intentionally made this way because the user 
+will benefit from being able to have everything given to them on one page. There are no requirement to have more than one page because the purpose of this website is the 
+memory game only. 
+
+The cards were designed by myself. I googled images of the films I wanted to use. A list of all of the websites I got the images from are detailed below, along with 
+all other sources. I then used Microsoft Publisher to create the card design. I wanted to have a black/dark and gold theme throughout. These colours were chosen to give a 
+Oscar Awards colour palette. The card backs themsleves are coloured in the same black and gold theme, with stars featured on each card to represent or remind the user 
+of Celebrity Stars, or the starts on the Hollywood Walk of Fame, keeping within the movie theme. The backs of the cards are identical for obvious reasons, to ensure that the user 
+isn't able to tell each card apart.
+
+The background is as well kept a dark colour, along with twinkling stars and moving gold/red clouds. 
+This wasn't created by myself, I have given the original source link at the bottom of this README file, but I felt that it suited the game perfectly with the colour/stars theme.
+
+In the orignal designs there was only a 'Time' and 'Score' tracker. In the final version I have also included how many matches have been made to let the user see at a glance 
+how many they have successfully matched, instead of having to count them manually. 
+
+The 'Time' tracker is initiated when the user clicks on the first card. It then counts up until the user has matched all of the cards. At the end of the game another screen (overlay)
+appears in front of the webpage to give the user further information. This includes the Total Time taken to complete the game. As well as: how many matches they've made,
+what score multiplier they received based on their time, and a button to restart the card and reshuffle the cards.
