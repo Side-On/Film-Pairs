@@ -89,3 +89,12 @@ mulitplier, Easy being the lowest reward and Hard being the highest.
 There will also be a 'Top Score' feature, showing the user their previous top score event after exiting the game. This will be displayed above the cards, as well as on the 
 game completed screen. 
 
+### Technologies used
+HTML5 - Used for the base coding of the website
+CSS3 - Used to style the webpages and their content
+GitHub - Used to save the word within a repository
+GitPod - Used to write and implement the coding
+Balsamiq - Used to create wire frame designs in the planning stage
+Microsoft Publisher - Used to create the cards
+Paint - Used to resize the card images
+
