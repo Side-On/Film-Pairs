@@ -55,6 +55,9 @@ This is a simple card memory trivia game. There is only one webpage created to c
 will benefit from being able to have everything given to them on one page. There are no requirement to have more than one page because the purpose of this website is the 
 memory game only. 
 
+When the user successfully matches a pair of cards, both of those card will stay turned over. If two cards aren't matched, they will both turn over back to their original 
+state. This process continues until all pairs are matched.
+
 The cards were designed by myself. I googled images of the films I wanted to use. A list of all of the websites I got the images from are detailed below, along with 
 all other sources. I then used Microsoft Publisher to create the card design. I wanted to have a black/dark and gold theme throughout. These colours were chosen to give a 
 Oscar Awards colour palette. The card backs themsleves are coloured in the same black and gold theme, with stars featured on each card to represent or remind the user 
@@ -67,6 +70,17 @@ This wasn't created by myself, I have given the original source link at the bott
 In the orignal designs there was only a 'Time' and 'Score' tracker. In the final version I have also included how many matches have been made to let the user see at a glance 
 how many they have successfully matched, instead of having to count them manually. 
 
-The 'Time' tracker is initiated when the user clicks on the first card. It then counts up until the user has matched all of the cards. At the end of the game another screen (overlay)
-appears in front of the webpage to give the user further information. This includes the Total Time taken to complete the game. As well as: how many matches they've made,
-what score multiplier they received based on their time, and a button to restart the card and reshuffle the cards.
+The 'Time' tracker is initiated when the user clicks on the first card. It then counts up until the user has matched all of the cards. At the end of the game another 
+screen (overlay) appears in front of the webpage to give the user further information. This includes the Total Time taken to complete the game. As well as: how many matches
+were made, what score multiplier they received based on their time, and a button to restart the card and reshuffle the cards.
+
+### Features Left to Implement
+
+Unfortunately due to time restrictions to complete the project, I was unable to create a feature that allows the user to choose a difficulty setting. This feature will
+give the user three options: 
+Easy - 8 cards on display making four possible matches.
+Medium - 12 cards on display making six possible matches.
+Hard - 16 cards making eight possible matches.
+
+These settings would be dispalyed underneath the instructions and respond to the user clicking on each one. This would also allow the user to earn a bigger score 
+mulitplier, Easy being the lowest reward and Hard being the highest.
