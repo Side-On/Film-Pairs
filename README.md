@@ -76,11 +76,16 @@ were made, what score multiplier they received based on their time, and a button
 
 ### Features Left to Implement
 
-Unfortunately due to time restrictions to complete the project, I was unable to create a feature that allows the user to choose a difficulty setting. This feature will
-give the user three options: 
+Unfortunately due to time restrictions to complete the project, I was unable to create a feature that allows the user to choose a difficulty setting. However I do plan to 
+add this feature in the future. Once the button is clicked, the cards shown on the screen will increase and decrease depending on the setting chosen.
+The feature will give the user three options: 
 Easy - 8 cards on display making four possible matches.
 Medium - 12 cards on display making six possible matches.
 Hard - 16 cards making eight possible matches.
 
-These settings would be dispalyed underneath the instructions and respond to the user clicking on each one. This would also allow the user to earn a bigger score 
+These settings would be displayed underneath the instructions and respond to the user clicking on each one. This would also allow the user to earn a bigger score 
 mulitplier, Easy being the lowest reward and Hard being the highest.
+
+There will also be a 'Top Score' feature, showing the user their previous top score event after exiting the game. This will be displayed above the cards, as well as on the 
+game completed screen. 
+
