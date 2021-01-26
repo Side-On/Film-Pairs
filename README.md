@@ -42,3 +42,9 @@ There is a button for the user to reset the game.
 'I have beaten the games times within different time limits but want to try and get a better time.'
 
 
+### Wireframe Designs
+
+The following wireframe designs were created before the project began. They were a great way to experiment with different designs and layouts for the landing page and the card 
+game layout. The final design is shown below to keep the UX as simple as possible to make it accessible and useable by a wide range of people of all ages. 
+
+Instructions are shown on the left hand sign, making them the most likely to be read first. Large fonts are given to the headings of each paragraph to draw attention on first visit to the page.
