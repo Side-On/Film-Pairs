@@ -98,3 +98,11 @@ Balsamiq - Used to create wire frame designs in the planning stage
 Microsoft Publisher - Used to create the cards
 Paint - Used to resize the card images
 
+### Testing
+Please find this on the testing.md document.
+
+### Deployment
+I have been using GitHub and GitPod to create this game and website. I have used HTML, CSS and JavaScript languages in order to create 
+everything.
+
+### Acknowledgement
