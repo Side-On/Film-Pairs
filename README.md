@@ -23,7 +23,22 @@ At the end of the game the user will be shown another screen detailed how many m
 There is a button for the user to reset the game. 
 
 
-
 #### User 1
-'I have never played a card matching game before and this is the first time on this website'
+'This is the first time I have visited this website and I don't know what it is.'
+
+#### User 2
+'I have never played a card matching game before and I don't know the rules.'
+
+#### User 3
+'I have played a card matching game and I want to try and complete the one on this website.'
+
+#### User 4
+'I have played a card matching game but I am looking for something that is more of a challenge compared to just matching two pairs.'
+
+#### User 5
+'I have played this game before and I remember that my previous score was 800, I want to be able to try and beat that score.'
+
+#### User 6
+'I have beaten the games times within different time limits but want to try and get a better time.'
+
 
