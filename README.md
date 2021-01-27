@@ -2,7 +2,7 @@
 
 ## Interactive Frontend Development 
 
-## Film Trivia Memory Card Game
+### Film Trivia Memory Card Game
 
 This project is a memory card game for users to play. The rules of the game is to match two cards which are linked via films quote and a 
 screenshot of the film. The user clicks on a backwards facing card to reveal the image or quote underneath, this card will stay visable. 
@@ -13,7 +13,7 @@ If the match is incorrect, both cards will turn back over and the user must have
 
 Once all matches are made, a new screen will appear showing the players final score. 
 
-### User Experience
+#### User Experience
 
 As this game has been remade in multiple different styles on a variety of topics and themes, I wanted to create a version which also incorporates
 film trivia as well. I have added instructions on the left of the card container on the landing page of the website, so the user will know the rules of the game on their first visit.
@@ -25,33 +25,53 @@ At the end of the game the user will be shown another screen detailed how many m
 There is a button for the user to reset the game. 
 
 
-#### User 1
-'This is the first time I have visited this website and I don't know what it is.'
+##### User 1
 
-#### User 2
-'I have never played a card matching game before and I don't know the rules.'
+    > 'This is the first time I have visited this website and I don't know what it is.'
 
-#### User 3
-'I have played a card matching game and I want to try and complete the one on this website.'
+##### User 2
 
-#### User 4
-'I have played a card matching game but I am looking for something that is more of a challenge compared to just matching two pairs.'
+    > 'I have never played a card matching game before and I don't know the rules.'
 
-#### User 5
-'I have played this game before and I remember that my previous score was 800, I want to be able to try and beat that score.'
+This is addressed by the simple layout of the landing page. The instructions are displayed immediately on the left hand side of the page. Where the user is
+most likely to start reading from. The instructions are written in a simple way and not using complex language to that a wide range of age groups can play.
 
-#### User 6
-'I have beaten the games times within different time limits but want to try and get a better time.'
+##### User 3
+
+    > 'I have played a card matching game and I want to try and complete the one on this website.'
+
+This user can easily begin a game by clicking on any of the cards. This will then start the game. If the user feel likes that have wasted time trying 
+to work out what to do without reading the instructions they can then restart the game using the Restart button. This was also reshuffle the cards to create a new
+unique game each time.
+
+##### User 4
+
+    >'I have played a card matching game but I am looking for something that is more of a challenge compared to just matching two pairs.'
 
 
-### Wireframe Designs
+
+
+
+
+##### User 5
+
+    >'I have played this game before and I remember that my previous score was 800, I want to be able to try and beat that score.'
+
+
+##### User 6
+
+    >'I have beaten the games times within different time limits but want to try and get a better time.'
+
+
+
+#### Wireframe Designs
 
 The following wireframe designs were created before the project began. They were a great way to experiment with different designs and layouts for the landing page and the card 
 game layout. The final design is shown below to keep the UX as simple as possible to make it accessible and useable by a wide range of people of all ages. 
 
 Instructions are shown on the left hand sign, making them the most likely to be read first. Large fonts are given to the headings of each paragraph to draw attention on first visit to the page.
 
-### Features
+#### Features
 
 This is a simple card memory trivia game. There is only one webpage created to contain both the instructions and game itself. The design is intentionally made this way because the user 
 will benefit from being able to have everything given to them on one page. There are no requirement to have more than one page because the purpose of this website is the 
@@ -76,7 +96,7 @@ The 'Time' tracker is initiated when the user clicks on the first card. It then 
 screen (overlay) appears in front of the webpage to give the user further information. This includes the Total Time taken to complete the game. As well as: how many matches
 were made, what score multiplier they received based on their time, and a button to restart the card and reshuffle the cards.
 
-### Features Left to Implement
+#### Features Left to Implement
 
 Unfortunately due to time restrictions to complete the project, I was unable to create a feature that allows the user to choose a difficulty setting. However I do plan to 
 add this feature in the future. Once the button is clicked, the cards shown on the screen will increase and decrease depending on the setting chosen.
@@ -91,7 +111,7 @@ mulitplier, Easy being the lowest reward and Hard being the highest.
 There will also be a 'Top Score' feature, showing the user their previous top score event after exiting the game. This will be displayed above the cards, as well as on the 
 game completed screen. This feature will to introduced to encourage the users to return to try and beat their previous score.
 
-### Technologies used
+#### Technologies used
 
 - HTML5
 - CSS3
@@ -107,17 +127,17 @@ game completed screen. This feature will to introduced to encourage the users to
 - Jigsaw
 - Jshint
 
-### Testing
+#### Testing
 Please find this on the testing.md document.
 
-### Deployment
+#### Deployment
 I have been using GitHub and GitPod to create this game and website. I have used HTML, CSS and JavaScript languages in order to create the project.
 In order for other developers or people wishing to view the webpage, they will need to use both GitHub and GitPod to get to the source code to
 view and edit it. To get there the user can have the GitPod Chrome Extension by googling 'GitPod Chrome Extension', follow the instructions on 
 installing it and adding it to their Chrome. If they are on the GitHub project page, refresh that page and a green GitPod button will have appeared
 above the documents. All of the files will load and the user can go into each and edit them as they please. 
 
-### Acknowledgements
+#### Acknowledgements
 
 - Terminator pic - https://www.pinterest.co.uk/pin/214906213447249490/
 
