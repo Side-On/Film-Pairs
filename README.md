@@ -93,17 +93,29 @@ game completed screen. This feature will to introduced to encourage the users to
 
 ### Technologies used
 HTML5
+
 CSS3
+
 JavaScript
+
 GitHub
+
 GitPod
+
 Balsamiq
+
 Microsoft Publisher
+
 Paint
+
 Google fonts
+
 Slack
+
 w3 Validator
+
 Jigsaw
+
 Jshint
 
 
