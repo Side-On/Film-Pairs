@@ -27,18 +27,18 @@ There is a button for the user to reset the game.
 
 ##### User 1
 
-    > 'This is the first time I have visited this website and I don't know what it is.'
+> 'This is the first time I have visited this website and I don't know what it is.'
 
 ##### User 2
 
-    > 'I have never played a card matching game before and I don't know the rules.'
+> 'I have never played a card matching game before and I don't know the rules.'
 
 This is addressed by the simple layout of the landing page. The instructions are displayed immediately on the left hand side of the page. Where the user is
 most likely to start reading from. The instructions are written in a simple way and not using complex language to that a wide range of age groups can play.
 
 ##### User 3
 
-    > 'I have played a card matching game and I want to try and complete the one on this website.'
+> 'I have played a card matching game and I want to try and complete the one on this website.'
 
 This user can easily begin a game by clicking on any of the cards. This will then start the game. If the user feel likes that have wasted time trying 
 to work out what to do without reading the instructions they can then restart the game using the Restart button. This was also reshuffle the cards to create a new
@@ -46,7 +46,7 @@ unique game each time.
 
 ##### User 4
 
-    >'I have played a card matching game but I am looking for something that is more of a challenge compared to just matching two pairs.'
+>'I have played a card matching game but I am looking for something that is more of a challenge compared to just matching two pairs.'
 
 
 
@@ -55,12 +55,12 @@ unique game each time.
 
 ##### User 5
 
-    >'I have played this game before and I remember that my previous score was 800, I want to be able to try and beat that score.'
+>'I have played this game before and I remember that my previous score was 800, I want to be able to try and beat that score.'
 
 
 ##### User 6
 
-    >'I have beaten the games times within different time limits but want to try and get a better time.'
+>'I have beaten the games times within different time limits but want to try and get a better time.'
 
 
 
