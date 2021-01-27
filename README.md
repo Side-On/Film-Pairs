@@ -92,32 +92,20 @@ There will also be a 'Top Score' feature, showing the user their previous top sc
 game completed screen. This feature will to introduced to encourage the users to return to try and beat their previous score.
 
 ### Technologies used
-HTML5
 
-CSS3
-
-JavaScript
-
-GitHub
-
-GitPod
-
-Balsamiq
-
-Microsoft Publisher
-
-Paint
-
-Google fonts
-
-Slack
-
-w3 Validator
-
-Jigsaw
-
-Jshint
-
+- HTML5
+- CSS3
+- JavaScript
+- GitHub
+- GitPod
+- Balsamiq
+- Microsoft Publisher
+- Paint
+- Google fonts
+- Slack
+- w3 Validator
+- Jigsaw
+- Jshint
 
 ### Testing
 Please find this on the testing.md document.
@@ -131,25 +119,25 @@ above the documents. All of the files will load and the user can go into each an
 
 ### Acknowledgements
 
-terminator pic - https://www.pinterest.co.uk/pin/214906213447249490/
+- Terminator pic - https://www.pinterest.co.uk/pin/214906213447249490/
 
-300 pic - https://soundcloud.com/crib_music/this-is-sparta
+- 300 pic - https://soundcloud.com/crib_music/this-is-sparta
 
-nemo - https://vaei.vai.org/2019/08/06/just-keep-swimming/
+- Finding Nemo - https://vaei.vai.org/2019/08/06/just-keep-swimming/
 
-hunger - https://www.etonline.com/news/177718_7_hunger_games_prequels_we_would_watch
+- The Hunger Games - https://www.etonline.com/news/177718_7_hunger_games_prequels_we_would_watch
 
-spider-man - https://theconversation.com/spider-man-homecoming-spins-a-web-of-fact-and-fantasy-79900
+- Spider-Man - https://theconversation.com/spider-man-homecoming-spins-a-web-of-fact-and-fantasy-79900
 
-zoolander - https://8tracks.com/lamaha/what-is-this-a-center-for-ants
+- Zoolander - https://8tracks.com/lamaha/what-is-this-a-center-for-ants
 
-elf - https://www.msn.com/en-us/foodanddrink/foodnews/you-sit-on-a-throne-of-lies-if-youre-not-psyched-about-this-buddy-the-elf-board-game/ss-BB19vhvo
+- Elf - https://www.msn.com/en-us/foodanddrink/foodnews/you-sit-on-a-throne-of-lies-if-youre-not-psyched-about-this-buddy-the-elf-board-game/ss-BB19vhvo
 
-quotes - https://www.thrillist.com/entertainment/nation/best-movie-quotes
+- Quotes ideas - https://www.thrillist.com/entertainment/nation/best-movie-quotes
 
-star background - https://codepen.io/stealy/pen/zYxXpza
+- Stars background - https://codepen.io/stealy/pen/zYxXpza
 
-card flip - https://codepen.io/jacoboakley/pen/ZpRbqB
+- Card flip code - https://codepen.io/jacoboakley/pen/ZpRbqB
 
-active button code - w3schools.com
+- Various snipets of code - https://w3schools.com
 
