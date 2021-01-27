@@ -1,5 +1,7 @@
 # Milestone Project 2
 
+## Interactive Frontend Development 
+
 ## Film Trivia Memory Card Game
 
 This project is a memory card game for users to play. The rules of the game is to match two cards which are linked via films quote and a 
@@ -87,22 +89,55 @@ These settings would be displayed underneath the instructions and respond to the
 mulitplier, Easy being the lowest reward and Hard being the highest.
 
 There will also be a 'Top Score' feature, showing the user their previous top score event after exiting the game. This will be displayed above the cards, as well as on the 
-game completed screen. 
+game completed screen. This feature will to introduced to encourage the users to return to try and beat their previous score.
 
 ### Technologies used
-HTML5 - Used for the base coding of the website
-CSS3 - Used to style the webpages and their content
-GitHub - Used to save the word within a repository
-GitPod - Used to write and implement the coding
-Balsamiq - Used to create wire frame designs in the planning stage
-Microsoft Publisher - Used to create the cards
-Paint - Used to resize the card images
+HTML5
+CSS3
+JavaScript
+GitHub
+GitPod
+Balsamiq
+Microsoft Publisher
+Paint
+Google fonts
+Slack
+w3 Validator
+Jigsaw
+Jshint
+
 
 ### Testing
 Please find this on the testing.md document.
 
 ### Deployment
-I have been using GitHub and GitPod to create this game and website. I have used HTML, CSS and JavaScript languages in order to create 
-everything.
+I have been using GitHub and GitPod to create this game and website. I have used HTML, CSS and JavaScript languages in order to create the project.
+In order for other developers or people wishing to view the webpage, they will need to use both GitHub and GitPod to get to the source code to
+view and edit it. To get there the user can have the GitPod Chrome Extension by googling 'GitPod Chrome Extension', follow the instructions on 
+installing it and adding it to their Chrome. If they are on the GitHub project page, refresh that page and a green GitPod button will have appeared
+above the documents. All of the files will load and the user can go into each and edit them as they please. 
 
-### Acknowledgement
+### Acknowledgements
+
+terminator pic - https://www.pinterest.co.uk/pin/214906213447249490/
+
+300 pic - https://soundcloud.com/crib_music/this-is-sparta
+
+nemo - https://vaei.vai.org/2019/08/06/just-keep-swimming/
+
+hunger - https://www.etonline.com/news/177718_7_hunger_games_prequels_we_would_watch
+
+spider-man - https://theconversation.com/spider-man-homecoming-spins-a-web-of-fact-and-fantasy-79900
+
+zoolander - https://8tracks.com/lamaha/what-is-this-a-center-for-ants
+
+elf - https://www.msn.com/en-us/foodanddrink/foodnews/you-sit-on-a-throne-of-lies-if-youre-not-psyched-about-this-buddy-the-elf-board-game/ss-BB19vhvo
+
+quotes - https://www.thrillist.com/entertainment/nation/best-movie-quotes
+
+star background - https://codepen.io/stealy/pen/zYxXpza
+
+card flip - https://codepen.io/jacoboakley/pen/ZpRbqB
+
+active button code - w3schools.com
+
