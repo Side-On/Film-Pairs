@@ -12,9 +12,7 @@ function startGame() {
     shuffle();
 }
 
-function restartGame() {
-    shuffle();
-}
+
 
 function flipCard() {
 
@@ -151,6 +149,11 @@ function matchCounter() {
     }
 }
 
-
+function restartGame() {
+    shuffle();
+    document.getElementById("game-completed-overlay").style.display = "none";
+    document.getElementById("current-score").innerHTML = "";
+    currentScore();
+}
 
 // Refreshes the web page
