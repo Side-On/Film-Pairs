@@ -27,7 +27,7 @@
                 <p class="total-score-message">Total Score - <span id="total-score">0</span></p>
             </div>
             <br>
-            <button id="close-overlay" onclick="restartGame()">Close and Restart the Game!</button>
+            <button id="close-overlay-button" onclick="restartGame()">Close and Restart the Game!</button>
         </div>
     </div>
     <div class="stars">
@@ -51,7 +51,8 @@
                         <p>The game is timed and you'll receive a score multiplyer depending on how quickly you complete the game.</p>
                         <br>
                         <p>If you get stuck at any point or want to reset and have another go, click the button below to re-shuffle the cards.</p>
-                        <button id="restart-button" onclick="restartGame()">Restart the Game</button>
+                        <button class="game-button" onclick="startGame()">Shuffle the Cards</button>
+                        <button class="game-button" onclick="restartGame()">Restart the Game</button>
                     </div>
 
                     <div id="game-container">
@@ -151,7 +152,7 @@
             </div>
         </div>
     </div>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/js-test.js"></script>
 </body>
 
 </html>
