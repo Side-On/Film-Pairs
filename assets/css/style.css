@@ -61,13 +61,18 @@
  .reviews {
      display: inline;
 }
- #close-overlay {
+ #close-overlay-button {
      font-size: 25px;
 }
  .show{
      visibility: visible !important;
      opacity: 1 !important;
 }
+
+.hide {
+    display: none !important;
+}
+
  .content {
      padding: 5px 20px;
 }
@@ -93,7 +98,7 @@
      cursor: pointer;
      outline: 0px solid #da8301!important;
 }
- #restart-button {
+ .game-button {
      font-size: 20px;
      margin: 20px;
 }
@@ -145,6 +150,11 @@
  .card.flip {
      transform: rotateY(180deg);
 }
+
+.reset-cards {
+    transform: rotateY(-180deg) !important;
+}
+
  .card-front {
      transform: rotateY(180deg);
 }
@@ -179,7 +189,7 @@
      button {
          font-size: 0.5rem;
     }
-     #restart-button {
+     .game-button {
          font-size: 1rem;
     }
      .active, .difficulty-button:hover {
