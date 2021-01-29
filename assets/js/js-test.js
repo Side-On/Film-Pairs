@@ -1,24 +1,48 @@
 /*jshint esversion: 6 */
-const cards = document.querySelectorAll(".card");
+var cards = document.querySelectorAll(".card");
 var cardFlipped = false;
 var firstCard;
 var secondCard;
 var lockBoard = false;
-var timerOn = true;
+var timerOn = false;
 
 /* Card flip function */
 
 function startGame() {
     shuffle();
+    document.getElementById("game-completed-overlay").style.display = "none";
+    resetScore();
+    //for loop
+    if(cards.classList.contains("flip")) {
+      cards.classList.remove("flip");
+    }
+}//make sure in the right order
+
+function restartGame() {
+    shuffle();
 }
 
+function resetScore() {
+    if (scoreKeeper !== "0") {
+        score = 0;
+        scoreKeeper.innerHTML = "0";
+    }
+}
 
+function resetTime() {
+    if (minutes !== 0 && seconds !== 0) {
+        minutes = 0;
+        seconds = 0;
+        //time = 0;
+        timer.innerHTML = "00:00";
+    }
+}
 
 function flipCard() {
 
-    if (timerOn === true) {
+    if (timerOn === false) {
         startTimer();
-        timerOn = false;
+        timerOn = true;
     }
     if (lockBoard) return;
     if (this === firstCard) return;
@@ -40,7 +64,8 @@ function flipCard() {
 function checkMatch() {
     if (firstCard.dataset.framework === secondCard.dataset.framework) {
         disableCards();
-    matchCounter();
+        matchCounter();
+        currentScore();
         return;
 
     }
@@ -53,7 +78,6 @@ function disableCards() {
     firstCard.removeEventListener("click", flipCard);
     secondCard.removeEventListener("click", flipCard);
     resetBoard();
-    currentScore();
 }
 
 
@@ -101,6 +125,8 @@ function startTimer() {
     }, 1000);
 }
 
+
+
 // Score
 var score = 0;
 var scoreKeeper = document.getElementById("current-score");
@@ -137,8 +163,8 @@ var matchesMade = document.getElementById("matches-made");
 function matchCounter() {
     match++;
     matchesMade.innerHTML = match;
-    
-    if (match == 1) {
+
+    if (match == 5) {
 
         var timeFinished = document.getElementById("timer").innerHTML;
         var completeMatches = document.getElementById("matches-made").innerHTML;
@@ -148,12 +174,3 @@ function matchCounter() {
         document.getElementById("game-completed-overlay").style.display = "block";
     }
 }
-
-function restartGame() {
-    shuffle();
-    document.getElementById("game-completed-overlay").style.display = "none";
-    document.getElementById("current-score").innerHTML = "";
-    currentScore();
-}
-
-// Refreshes the web page
