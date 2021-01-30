@@ -14,15 +14,13 @@ function startGame() {
         if (cards[i].classList.contains("flip")) {
             cards[i].classList.remove("flip");
         }
-    }
+    }    
+    
     var delay = 1000;
     setTimeout(function () {
         shuffle();
-        resetScore();
-        resetMatches();
-        enableCards();
         document.getElementById("game-completed-overlay").style.display = "none";
-    }, delay);
+}, delay);
 }
 
 function flipCard() {
@@ -65,10 +63,6 @@ function disableCards() {
     firstCard.removeEventListener("click", flipCard);
     secondCard.removeEventListener("click", flipCard);
     resetBoard();
-}
-
-function enableCards() {
-cards.forEach(card => card.addEventListener("click", flipCard));
 }
 
 
@@ -151,13 +145,6 @@ function currentScore() {
 
 }
 
-function resetScore() {
-    if (scoreKeeper !== "0") {
-        score = 0;
-        scoreKeeper.innerHTML = "0";
-    }
-}
-
 var match = 0;
 var matchesMade = document.getElementById("matches-made");
 
@@ -173,12 +160,5 @@ function matchCounter() {
         document.getElementById("time-taken").innerHTML = timeFinished;
         document.getElementById("matches-completed").innerHTML = completeMatches;
         document.getElementById("game-completed-overlay").style.display = "block";
-    }
-}
-
-function resetMatches() {
-    if (matchesMade !== "0") {
-        match = 0;
-        matchesMade.innerHTML = "0";
     }
 }
