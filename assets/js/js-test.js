@@ -162,3 +162,10 @@ function matchCounter() {
         document.getElementById("game-completed-overlay").style.display = "block";
     }
 }
+
+function resetMatches() {
+    if (matchesMade !== "0") {
+        match = 0;
+        matchesMade.innerHTML = "0";
+    }
+}
