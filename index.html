@@ -152,6 +152,15 @@
             </div>
         </div>
     </div>
+    <script>
+
+        var cards = document.querySelectorAll(".card");
+        
+    cards.forEach(card => {
+        var shuffleCards = Math.floor(Math.random() * 12);
+        card.style.order = shuffleCards;
+    });
+    </script>
     <script src="assets/js/js-test.js"></script>
 </body>
 
