@@ -19,6 +19,9 @@ function startGame() {
     var delay = 1000;
     setTimeout(function () {
         shuffle();
+        resetScore();
+        resetMatches();
+        enableCards();
         document.getElementById("game-completed-overlay").style.display = "none";
 }, delay);
 }
