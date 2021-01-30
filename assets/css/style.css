@@ -118,6 +118,21 @@
      display: flex;
      justify-content: space-between;
 }
+
+.game-time-info {
+    text-align: left;
+    width: 33%;
+}
+
+.matches {
+    text-align: center;
+    width: 33%;
+}
+
+.current-score {
+    text-align: right;
+    width: 33%;
+}
  .card {
      background-color: black;
      height: 130px;
