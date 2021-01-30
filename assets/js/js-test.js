@@ -9,40 +9,27 @@ var timerOn = false;
 /* Card flip function */
 
 function startGame() {
-    shuffle();
-    document.getElementById("game-completed-overlay").style.display = "none";
-    resetScore();
-    //for loop
-    if(cards.classList.contains("flip")) {
-      cards.classList.remove("flip");
+    var i;
+    for (i = 0; i < cards.length ; i++) {
+        if (cards[i].classList.contains("flip")) {
+            cards[i].classList.remove("flip");
+        }
     }
-}//make sure in the right order
-
-function restartGame() {
-    shuffle();
-}
-
-function resetScore() {
-    if (scoreKeeper !== "0") {
-        score = 0;
-        scoreKeeper.innerHTML = "0";
-    }
-}
-
-function resetTime() {
-    if (minutes !== 0 && seconds !== 0) {
-        minutes = 0;
-        seconds = 0;
-        //time = 0;
-        timer.innerHTML = "00:00";
-    }
+    var delay = 1000;
+    setTimeout(function () {
+        shuffle();
+        resetScore();
+        resetMatches();
+        enableCards();
+        document.getElementById("game-completed-overlay").style.display = "none";
+    }, delay);
 }
 
 function flipCard() {
 
     if (timerOn === false) {
-        startTimer();
-        timerOn = true;
+    startTimer();
+      timerOn = true;
     }
     if (lockBoard) return;
     if (this === firstCard) return;
@@ -80,12 +67,16 @@ function disableCards() {
     resetBoard();
 }
 
+function enableCards() {
+cards.forEach(card => card.addEventListener("click", flipCard));
+}
+
 
 function unFlipCards() {
 
     lockBoard = true;
 
-    setTimeout(() => {
+    setTimeout(function () {
         firstCard.classList.remove("flip");
         secondCard.classList.remove("flip");
         resetBoard();
@@ -102,7 +93,7 @@ function resetBoard() {
 //Shuffles the cards to random position everytime the page refreshed or Restart button is pressed
 function shuffle() {
     cards.forEach(card => {
-        var shuffleCards = Math.floor(Math.random() * 12);
+        var shuffleCards = Math.floor(Math.random() * 16);
         card.style.order = shuffleCards;
     });
 };
@@ -125,8 +116,11 @@ function startTimer() {
     }, 1000);
 }
 
-
-
+function resetTime() {
+    timerOn = false;
+        time = 0;
+        timer.innerHTML = "00:00";
+}
 // Score
 var score = 0;
 var scoreKeeper = document.getElementById("current-score");
@@ -150,11 +144,18 @@ function currentScore() {
     } else if (time >= 26 && time <= 35) {
         totalScore.innerHTML = score * 1.7;
         timeBonus.innerHTML = "x1.7";
-    } else if (time >= 1 && time <= 25) {
+    } else if (time >= 0 && time <= 25) {
         totalScore.innerHTML = score * 2;
         timeBonus.innerHTML = "x2";
     }
 
+}
+
+function resetScore() {
+    if (scoreKeeper !== "0") {
+        score = 0;
+        scoreKeeper.innerHTML = "0";
+    }
 }
 
 var match = 0;
@@ -164,7 +165,7 @@ function matchCounter() {
     match++;
     matchesMade.innerHTML = match;
 
-    if (match == 5) {
+    if (match == 1) {
 
         var timeFinished = document.getElementById("timer").innerHTML;
         var completeMatches = document.getElementById("matches-made").innerHTML;
@@ -172,5 +173,12 @@ function matchCounter() {
         document.getElementById("time-taken").innerHTML = timeFinished;
         document.getElementById("matches-completed").innerHTML = completeMatches;
         document.getElementById("game-completed-overlay").style.display = "block";
+    }
+}
+
+function resetMatches() {
+    if (matchesMade !== "0") {
+        match = 0;
+        matchesMade.innerHTML = "0";
     }
 }
