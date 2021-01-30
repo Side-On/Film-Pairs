@@ -118,6 +118,10 @@ function startTimer() {
     }, 1000);
 }
 
+
+function stopTimer() {
+    clearInterval(timer);
+}
 function resetTime() {
     document.getElementById("timer").innerHTML = "00:00";
     time = 0;
@@ -169,7 +173,7 @@ function matchCounter() {
     match++;
     matchesMade.innerHTML = match;
 
-    if (match == 4) {
+    if (match == 1) {
 
         var timeFinished = document.getElementById("timer").innerHTML;
         var completeMatches = document.getElementById("matches-made").innerHTML;
@@ -177,6 +181,7 @@ function matchCounter() {
         document.getElementById("time-taken").innerHTML = timeFinished;
         document.getElementById("matches-completed").innerHTML = completeMatches;
         document.getElementById("game-completed-overlay").style.display = "block";
+        stopTimer();
     }
 }
 
