@@ -35,7 +35,7 @@
      position: absolute;
      top: 50%;
      left: 50%;
-     font-size: 30px;
+     font-size: 40px;
      transform: translate(-50%,-50%);
      -ms-transform: translate(-50%,-50%);
 }
@@ -46,23 +46,23 @@
      font-size: 1.8rem;
 }
  .results {
-     font-size: 20px;
+     font-size: 30px;
 }
  .total-score-message {
-     font-size: 38px;
+     font-size: 48px;
 }
  .time-bonus-text {
-     font-size: 14px;
+     font-size: 20px;
 }
  #time-bonus {
-     font-size: 16px;
+     font-size: 22px;
      font-weight: 600;
 }
  .reviews {
      display: inline;
 }
  #close-overlay-button {
-     font-size: 25px;
+     font-size: 30px;
 }
  .show{
      visibility: visible !important;
