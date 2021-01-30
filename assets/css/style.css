@@ -12,7 +12,7 @@
  #game-completed-overlay {
      position: fixed;
     /* Sit on top of the page content */
-    display: none;
+     display: none;
     /* Hidden by default */
      width: 100%;
     /* Full width (cover the whole page) */
@@ -68,11 +68,9 @@
      visibility: visible !important;
      opacity: 1 !important;
 }
-
-.hide {
-    display: none !important;
+ .hide {
+     display: none !important;
 }
-
  .content {
      padding: 5px 20px;
 }
@@ -102,7 +100,6 @@
      font-size: 20px;
      margin: 20px;
 }
-
  #game-container {
      display: grid;
      grid-template-columns: repeat(4,auto);
@@ -142,7 +139,8 @@
      -webkit-backface-visibility: hidden;
     /* Safari */
      backface-visibility: hidden;
-     transform: rotateX(0deg)
+     transform: rotateX(0deg) 
+    /* Fixes issue with FireFox where the back of the card isn't visible*/
 }
  .card:hover {
      box-shadow: 0px 0px 20px 1px rgb(255, 196, 21);
@@ -151,11 +149,9 @@
  .card.flip {
      transform: rotateY(180deg);
 }
-
-.reset-cards {
-    transform: rotateY(-180deg) !important;
+ .reset-cards {
+     transform: rotateY(-180deg) !important;
 }
-
  .card-front {
      transform: rotateY(180deg);
 }
@@ -206,77 +202,75 @@
          width: 62px;
     }
 }
-
-@media (max-width: 450px) {
-    #game-container {
+ @media (max-width: 450px) {
+     #game-container {
          width: 90%;
     }
-
 }
 /* Moving Stars Background */
 /* ============================================================================================== SED Innovations https://sed.am https://mkrtchyan.ga ================================================================================================= */
  @keyframes move-twink-back {
      from {
-        background-position:0 0;
+         background-position:0 0;
     }
      to {
-        background-position:-10000px 5000px;
+         background-position:-10000px 5000px;
     }
 }
  @-webkit-keyframes move-twink-back {
      from {
-        background-position:0 0;
+         background-position:0 0;
     }
      to {
-        background-position:-10000px 5000px;
+         background-position:-10000px 5000px;
     }
 }
  @-moz-keyframes move-twink-back {
      from {
-        background-position:0 0;
+         background-position:0 0;
     }
      to {
-        background-position:-10000px 5000px;
+         background-position:-10000px 5000px;
     }
 }
  @-ms-keyframes move-twink-back {
      from {
-        background-position:0 0;
+         background-position:0 0;
     }
      to {
-        background-position:-10000px 5000px;
+         background-position:-10000px 5000px;
     }
 }
  @keyframes move-clouds-back {
      from {
-        background-position:0 0;
+         background-position:0 0;
     }
      to {
-        background-position:10000px 0;
+         background-position:10000px 0;
     }
 }
  @-webkit-keyframes move-clouds-back {
      from {
-        background-position:0 0;
+         background-position:0 0;
     }
      to {
-        background-position:10000px 0;
+         background-position:10000px 0;
     }
 }
  @-moz-keyframes move-clouds-back {
      from {
-        background-position:0 0;
+         background-position:0 0;
     }
      to {
-        background-position:10000px 0;
+         background-position:10000px 0;
     }
 }
  @-ms-keyframes move-clouds-back {
      from {
-        background-position: 0;
+         background-position: 0;
     }
      to {
-        background-position:10000px 0;
+         background-position:10000px 0;
     }
 }
  .stars, .twinkling, .clouds {
@@ -311,3 +305,4 @@
      -webkit-animation:move-clouds-back 200s linear infinite;
      animation:move-clouds-back 200s linear infinite;
 }
+ 

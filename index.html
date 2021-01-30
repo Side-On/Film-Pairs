@@ -1,166 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="Description" content="Enter your description here" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.5.2/cosmo/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Film Pairs</title>
-</head>
-
-<body>
-    <div id="game-completed-overlay">
-        <div class="overlay-text">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="Description" content="Enter your description here" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.5.2/cosmo/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+      <link rel="stylesheet" href="assets/css/style.css">
+      <title>Film Pairs</title>
+   </head>
+   <body>
+      <div id="game-completed-overlay">
+         <div class="overlay-text">
             <h1 class="congrats-overlay">Congratulations</h1>
             <br>
             <h2 class="game-completed-overlay">The game has been completed!</h2>
             <br>
             <h3 class="results-overlay">Your results:</h3>
             <div class="results">
-                <p>Time - <span id="time-taken">00:00</span></p>
-                <p class="time-bonus-text">Your time gave you a <span id="time-bonus">x1.2</span> bonus!</p>
-                <p>Matches made - <span id="matches-completed">0</span>/8</p>
-                <p class="total-score-message">Total Score - <span id="total-score">0</span></p>
+               <p>Time - <span id="time-taken">00:00</span></p>
+               <p class="time-bonus-text">Your time gave you a <span id="time-bonus">x1.2</span> bonus!</p>
+               <p>Matches made - <span id="matches-completed">0</span>/8</p>
+               <p class="total-score-message">Total Score - <span id="total-score">0</span></p>
             </div>
             <br>
             <button id="close-overlay-button" onclick="startGame()">Close and Restart the Game!</button>
-        </div>
-    </div>
-    <div class="stars">
-        <div class="twinkling">
+         </div>
+      </div>
+      <div class="stars">
+         <div class="twinkling">
             <div class="clouds">
-                <header>
-                    <h1>Introducing The All New Pairs Matching Film Trivia Quiz Game Challenge!</h1>
-                </header>
-                <div class="content">
-                    <div class="welcome">
-                        <h2>What is it?</h2>
-                        <p> Great question. This isn't your average pairs game. Here you'll have you use
-                            every bit of your memory based pair matching skills, as well as your film based trivia
-                            knowledge.</p>
-                        <br>
-                        <h2>How to Play </h2>
-                        <p>All you have to do is match the film quote to the film. Easy.
-                            Turn any of the cards over to reveal the quote or image behind it, then try to find the
-                            matching film or quote.</p>
-                        <br>
-                        <p>The game is timed and you'll receive a score multiplyer depending on how quickly you complete the game.</p>
-                        <br>
-                        <p>If you get stuck at any point or want to reshuffle the cards and have another go, click the button below.</p>
-                        <button class="game-button" onclick="startGame()">Shuffle the Cards</button>
-                    </div>
-
-                    <div id="game-container">
-                        <div class="game-info-container">
-                            <div class="game-time-info">
-                                Time: <span id="timer">00:00</span>
-                            </div>
-                            <div class="matches">
-                                Matches: <span id="matches-made">0</span>/8
-                            </div>
-
-                            <div class="current-score">
-                                Current Score: <span id="current-score">0</span>
-                            </div>
+               <header>
+                  <h1>Introducing The All New Pairs Matching Film Trivia Quiz Game Challenge!</h1>
+               </header>
+               <div class="content">
+                  <div class="welcome">
+                     <h2>What is it?</h2>
+                     <p> Great question. This isn't your average pairs game. Here you'll have you use
+                        every bit of your memory based pair matching skills, as well as your film based trivia
+                        knowledge.
+                     </p>
+                     <br>
+                     <h2>How to Play </h2>
+                     <p>All you have to do is match the film quote to the film. Easy.
+                        Turn any of the cards over to reveal the quote or image behind it, then try to find the
+                        matching film or quote.
+                     </p>
+                     <br>
+                     <p>The game is timed and you'll receive a score multiplyer depending on how quickly you complete the game.</p>
+                     <br>
+                     <p>If you get stuck at any point or want to reshuffle the cards and have another go, click the button below.</p>
+                     <button class="game-button" onclick="startGame()">Shuffle the Cards</button>
+                  </div>
+                  <div id="game-container">
+                     <div class="game-info-container">
+                        <div class="game-time-info">
+                           Time: <span id="timer">00:00</span>
                         </div>
-                        <div class="card" data-framework="terminator">
-                            <img class="card-front" src="assets/images/card-ill-be-back.png" alt="card">
-                            <img class="card-back" src="assets/images/card-back.png" alt="card">
+                        <div class="matches">
+                           Matches: <span id="matches-made">0</span>/8
                         </div>
-
-                        <div class="card" data-framework="terminator">
-                            <img class="card-front" src="assets/images/terminator.png" alt="card">
-                            <img class="card-back" src="assets/images/card-back.png" alt="card">
+                        <div class="current-score">
+                           Current Score: <span id="current-score">0</span>
                         </div>
-
-                        <div class="card" data-framework="300">
-                            <img class="card-front" src="assets/images/300.png" alt="card">
-                            <img class="card-back" src="assets/images/card-back.png" alt="card">
-                        </div>
-
-                        <div class="card" data-framework="300">
-                            <img class="card-front" src="assets/images/this-is-sparta.png" alt="card">
-                            <img class="card-back" src="assets/images/card-back.png" alt="card">
-                        </div>
-
-                        <div class="card" data-framework="nemo">
-                            <img class="card-front" src="assets/images/nemo.png" alt="card">
-                            <img class="card-back" src="assets/images/card-back.png" alt="card">
-                        </div>
-
-                        <div class="card" data-framework="nemo">
-                            <img class="card-front" src="assets/images/keep-swimming.png" alt="card">
-                            <img class="card-back" src="assets/images/card-back.png" alt="card">
-                        </div>
-
-                        <div class="card" data-framework="zoolander">
-                            <img class="card-front" src="assets/images/center-for-ants.png" alt="card">
-                            <img class="card-back" src="assets/images/card-back.png" alt="card">
-                        </div>
-
-                        <div class="card" data-framework="zoolander">
-                            <img class="card-front" src="assets/images/zoolander.png" alt="card">
-                            <img class="card-back" src="assets/images/card-back.png" alt="card">
-                        </div>
-
-                        <div class="card" data-framework="spider-man">
-                            <img class="card-front" src="assets/images/spider-man.png" alt="card">
-                            <img class="card-back" src="assets/images/card-back.png" alt="card">
-                        </div>
-
-                        <div class="card" data-framework="spider-man">
-                            <img class="card-front" src="assets/images/great-responsibility.png" alt="card">
-                            <img class="card-back" src="assets/images/card-back.png" alt="card">
-                        </div>
-
-                        <div class="card" data-framework="hunger-games">
-                            <img class="card-front" src="assets/images/hunger-games.png" alt="card">
-                            <img class="card-back" src="assets/images/card-back.png" alt="card">
-                        </div>
-
-                        <div class="card" data-framework="hunger-games">
-                            <img class="card-front" src="assets/images/volunteer-as-tribute.png" alt="card">
-                            <img class="card-back" src="assets/images/card-back.png" alt="card">
-                        </div>
-
-                        <div class="card" data-framework="elf">
-                            <img class="card-front" src="assets/images/elf.png" alt="card">
-                            <img class="card-back" src="assets/images/card-back.png" alt="card">
-                        </div>
-
-                        <div class="card" data-framework="elf">
-                            <img class="card-front" src="assets/images/throne-of-lies.png" alt="card">
-                            <img class="card-back" src="assets/images/card-back.png" alt="card">
-                        </div>
-
-                        <div class="card" data-framework="pulp-fiction">
-                            <img class="card-front" src="assets/images/pulp-fiction.png" alt="card">
-                            <img class="card-back" src="assets/images/card-back.png" alt="card">
-                        </div>
-
-                        <div class="card" data-framework="pulp-fiction">
-                            <img class="card-front" src="assets/images/royale-with-cheese.png" alt="card">
-                            <img class="card-back" src="assets/images/card-back.png" alt="card">
-                        </div>
-                    </div>
-                </div>
+                     </div>
+                     <div class="card" data-framework="terminator">
+                        <img class="card-front" src="assets/images/card-ill-be-back.png" alt="card">
+                        <img class="card-back" src="assets/images/card-back.png" alt="card">
+                     </div>
+                     <div class="card" data-framework="terminator">
+                        <img class="card-front" src="assets/images/terminator.png" alt="card">
+                        <img class="card-back" src="assets/images/card-back.png" alt="card">
+                     </div>
+                     <div class="card" data-framework="300">
+                        <img class="card-front" src="assets/images/300.png" alt="card">
+                        <img class="card-back" src="assets/images/card-back.png" alt="card">
+                     </div>
+                     <div class="card" data-framework="300">
+                        <img class="card-front" src="assets/images/this-is-sparta.png" alt="card">
+                        <img class="card-back" src="assets/images/card-back.png" alt="card">
+                     </div>
+                     <div class="card" data-framework="nemo">
+                        <img class="card-front" src="assets/images/nemo.png" alt="card">
+                        <img class="card-back" src="assets/images/card-back.png" alt="card">
+                     </div>
+                     <div class="card" data-framework="nemo">
+                        <img class="card-front" src="assets/images/keep-swimming.png" alt="card">
+                        <img class="card-back" src="assets/images/card-back.png" alt="card">
+                     </div>
+                     <div class="card" data-framework="zoolander">
+                        <img class="card-front" src="assets/images/center-for-ants.png" alt="card">
+                        <img class="card-back" src="assets/images/card-back.png" alt="card">
+                     </div>
+                     <div class="card" data-framework="zoolander">
+                        <img class="card-front" src="assets/images/zoolander.png" alt="card">
+                        <img class="card-back" src="assets/images/card-back.png" alt="card">
+                     </div>
+                     <div class="card" data-framework="spider-man">
+                        <img class="card-front" src="assets/images/spider-man.png" alt="card">
+                        <img class="card-back" src="assets/images/card-back.png" alt="card">
+                     </div>
+                     <div class="card" data-framework="spider-man">
+                        <img class="card-front" src="assets/images/great-responsibility.png" alt="card">
+                        <img class="card-back" src="assets/images/card-back.png" alt="card">
+                     </div>
+                     <div class="card" data-framework="hunger-games">
+                        <img class="card-front" src="assets/images/hunger-games.png" alt="card">
+                        <img class="card-back" src="assets/images/card-back.png" alt="card">
+                     </div>
+                     <div class="card" data-framework="hunger-games">
+                        <img class="card-front" src="assets/images/volunteer-as-tribute.png" alt="card">
+                        <img class="card-back" src="assets/images/card-back.png" alt="card">
+                     </div>
+                     <div class="card" data-framework="elf">
+                        <img class="card-front" src="assets/images/elf.png" alt="card">
+                        <img class="card-back" src="assets/images/card-back.png" alt="card">
+                     </div>
+                     <div class="card" data-framework="elf">
+                        <img class="card-front" src="assets/images/throne-of-lies.png" alt="card">
+                        <img class="card-back" src="assets/images/card-back.png" alt="card">
+                     </div>
+                     <div class="card" data-framework="pulp-fiction">
+                        <img class="card-front" src="assets/images/pulp-fiction.png" alt="card">
+                        <img class="card-back" src="assets/images/card-back.png" alt="card">
+                     </div>
+                     <div class="card" data-framework="pulp-fiction">
+                        <img class="card-front" src="assets/images/royale-with-cheese.png" alt="card">
+                        <img class="card-back" src="assets/images/card-back.png" alt="card">
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-    </div>
-    <script>
-
-        var cards = document.querySelectorAll(".card");
-        
-    cards.forEach(card => {
-        var shuffleCards = Math.floor(Math.random() * 12);
-        card.style.order = shuffleCards;
-    });
-    </script>
-    <script src="assets/js/js-test.js"></script>
-</body>
-
+         </div>
+      </div>
+      <script>
+         var cards = document.querySelectorAll(".card");
+         
+         cards.forEach(card => {
+         var shuffleCards = Math.floor(Math.random() * 12);
+         card.style.order = shuffleCards;
+         });
+      </script>
+      <script src="assets/js/js-test.js"></script>
+   </body>
 </html>

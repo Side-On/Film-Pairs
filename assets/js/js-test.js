@@ -10,28 +10,28 @@ var timerOn = false;
 
 function startGame() {
     var i;
-    for (i = 0; i < cards.length ; i++) {
+    for (i = 0; i < cards.length; i++) {
         if (cards[i].classList.contains("flip")) {
             cards[i].classList.remove("flip");
         }
-    }    
-    
+    }
+
     var delay = 1000;
-    setTimeout(function () {
+    setTimeout(function() {
         shuffle();
         resetTime();
         resetScore();
         resetMatches();
         enableCards();
         document.getElementById("game-completed-overlay").style.display = "none";
-}, delay);
+    }, delay);
 }
 
 function flipCard() {
 
     if (timerOn === false) {
-    startTimer();
-      timerOn = true;
+        startTimer();
+        timerOn = true;
     }
     if (lockBoard) return;
     if (this === firstCard) return;
@@ -70,7 +70,7 @@ function disableCards() {
 }
 
 function enableCards() {
-cards.forEach(card => card.addEventListener("click", flipCard));
+    cards.forEach(card => card.addEventListener("click", flipCard));
 }
 
 
@@ -78,7 +78,7 @@ function unFlipCards() {
 
     lockBoard = true;
 
-    setTimeout(function () {
+    setTimeout(function() {
         firstCard.classList.remove("flip");
         secondCard.classList.remove("flip");
         resetBoard();
@@ -110,7 +110,7 @@ var minutes;
 var seconds;
 
 function startTimer() {
-    timer = setInterval(function () {
+    timer = setInterval(function() {
         time++;
         minutes = ("0" + Math.floor(time / 60)).slice(-2);
         seconds = ("0" + (time % 60)).slice(-2);
@@ -122,12 +122,13 @@ function startTimer() {
 function stopTimer() {
     clearInterval(timer);
 }
+
 function resetTime() {
     document.getElementById("timer").innerHTML = "00:00";
     time = 0;
     timerOn = false;
     clearInterval(timer);
-    }
+}
 
 // Score
 var score = 0;
