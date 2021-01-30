@@ -145,6 +145,13 @@ function currentScore() {
 
 }
 
+function resetScore() {
+    if (scoreKeeper !== "0") {
+        score = 0;
+        scoreKeeper.innerHTML = "0";
+    }
+}
+
 var match = 0;
 var matchesMade = document.getElementById("matches-made");
 
