@@ -173,7 +173,7 @@ function matchCounter() {
     match++;
     matchesMade.innerHTML = match;
 
-    if (match == 1) {
+    if (match == 8) {
 
         var timeFinished = document.getElementById("timer").innerHTML;
         var completeMatches = document.getElementById("matches-made").innerHTML;
