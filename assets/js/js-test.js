@@ -65,6 +65,10 @@ function disableCards() {
     resetBoard();
 }
 
+function enableCards() {
+cards.forEach(card => card.addEventListener("click", flipCard));
+}
+
 
 function unFlipCards() {
 
