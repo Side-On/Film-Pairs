@@ -19,6 +19,7 @@ function startGame() {
     var delay = 1000;
     setTimeout(function () {
         shuffle();
+        resetTime();
         resetScore();
         resetMatches();
         enableCards();
@@ -118,10 +119,12 @@ function startTimer() {
 }
 
 function resetTime() {
+    document.getElementById("timer").innerHTML = "00:00";
+    time = 0;
     timerOn = false;
-        time = 0;
-        timer.innerHTML = "00:00";
-}
+    clearInterval(timer);
+    }
+
 // Score
 var score = 0;
 var scoreKeeper = document.getElementById("current-score");
@@ -166,7 +169,7 @@ function matchCounter() {
     match++;
     matchesMade.innerHTML = match;
 
-    if (match == 1) {
+    if (match == 4) {
 
         var timeFinished = document.getElementById("timer").innerHTML;
         var completeMatches = document.getElementById("matches-made").innerHTML;
