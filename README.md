@@ -130,14 +130,40 @@ game completed screen. This feature will to introduced to encourage the users to
 #### Testing
 Please find this on the testing.md document.
 
+
 #### Deployment
-I have been using GitHub and GitPod to create this game and website. I have used HTML, CSS and JavaScript languages in order to create the project.
-In order for other developers or people wishing to view the webpage, they will need to use both GitHub and GitPod to get to the source code to
-view and edit it. To get there the user can have the GitPod Chrome Extension by googling 'GitPod Chrome Extension', follow the instructions on 
-installing it and adding it to their Chrome. If they are on the GitHub project page, refresh that page and a green GitPod button will have appeared
-above the documents. All of the files will load and the user can go into each and edit them as they please. 
+
+##### GitHub Pages
+The project was deployed to GitHub Pages using the following steps...
+
+1. Log in to GitHub and locate the GitHub Repository.
+2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
+3. Scroll down the Settings page until you locate the "GitHub Pages" Section, copy the link shown.
+4. Under "Source", click the dropdown called "None" and select "Master Branch".
+5. The page will automatically refresh.
+6. Scroll back down through the page to locate the now published site link in the "GitHub Pages" section.
+
+##### Making a Local Clone
+1. Log in to GitHub and locate the GitHub Repository.
+2. Under the repository name, click "Clone or download".
+3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+4. Open Git Bash.
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type git clone, and then paste the URL you copied in Step 3.
+7. $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+8. Press Enter. Your local clone will be created.
+
 
 #### Acknowledgements
+
+- Stars background - https://codepen.io/stealy/pen/zYxXpza
+
+- Card flip code - https://codepen.io/jacoboakley/pen/ZpRbqB
+
+- Various snipets of code - https://w3schools.com
+
+
+##### Images for the cards
 
 - Terminator pic - https://www.pinterest.co.uk/pin/214906213447249490/
 
@@ -155,9 +181,5 @@ above the documents. All of the files will load and the user can go into each an
 
 - Quotes ideas - https://www.thrillist.com/entertainment/nation/best-movie-quotes
 
-- Stars background - https://codepen.io/stealy/pen/zYxXpza
 
-- Card flip code - https://codepen.io/jacoboakley/pen/ZpRbqB
-
-- Various snipets of code - https://w3schools.com
 
