@@ -110,7 +110,7 @@ The instructions are written simply with no unnecessarily complicated language s
 game. The headers are purposefully made larger than the text underneath to group sections together.
 
 
-![Game completed wireframe](/wireframes/game-completed-wireframe.png)
+![Game completed wireframe](/wireframes/completed-game-wireframe.png)
 
 
 #### Features
