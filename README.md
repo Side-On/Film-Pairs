@@ -1,17 +1,18 @@
+
 # Milestone Project 2
 
 ## Interactive Frontend Development 
 
 ### Film Trivia Memory Card Game
 
-This project is a memory card game for users to play. The rules of the game is to match two cards which are linked via films quote and a 
-screenshot of the film. The user clicks on a backwards facing card to reveal the image or quote underneath, this card will stay visable. 
+This project is a memory card game for users to play. The rule of the game is to match two cards which are linked via films quote and a 
+screenshot of the film. The user clicks on a backwards facing card to reveal the image or quote underneath, this card will stay visible. 
 
-They then must click on another backwards facing card in an attempt to match it. If the match is correct both cards will stay visable.
+They then must click on another backwards facing card in an attempt to match it. If the match is correct both cards will stay visible.
 
 If the match is incorrect, both cards will turn back over and the user must have another go. This process repeats until all possible matches are made. 
 
-Once all matches are made, a new screen will appear showing the players final score. 
+Once all matches are made, a new screen will appear showing the player’s final score. 
 
 #### User Experience
 
@@ -21,7 +22,7 @@ film trivia as well. I have added instructions on the left of the card container
 The game is kept simple by only having up to eight possible matches. To increase the challenge and add a competitive element I have added a timer located above the card container. 
 This will start when the player turns over their first card. I have notified the player of this timer so they are aware of the multiplier.
 
-At the end of the game the user will be shown another screen detailed how many matches they have made, out of a possible 8, as well as their time taken and what score multiplier they recieved. 
+At the end of the game the user will be shown another screen detailed how many matches they have made, out of a possible 8, as well as their time taken and what score multiplier they received. 
 There is a button for the user to reset the game which will also reset all of their scores. matches and time.
 
 
@@ -31,7 +32,7 @@ There is a button for the user to reset the game which will also reset all of th
 
 ![User Story 1](/screenshots/user-1.png)
 
-This is the first and only page the user sees. The design idea was keep everything as simple as possible, so all of the attention is on the game itself.
+This is the first and only page the user sees. The design idea was to keep everything as simple as possible, so all of the attention is on the game itself.
 The heading tells the user exactly what the website it, that is it a memory game.
 
 ##### User 2
@@ -40,7 +41,7 @@ The heading tells the user exactly what the website it, that is it a memory game
 
 ![User Story 2](/screenshots/user-2.png)
 
-This is addressed by the simple layout of the landing page. The instructions are displayed immediately on the left hand side of the page. Where the user is
+This is addressed by the simple layout of the landing page. The instructions are displayed immediately on the left-hand side of the page. Where the user is
 most likely to start reading from. The instructions are written in a simple way and not using complex language to that a wide range of age groups can play.
 
 ##### User 3
@@ -77,7 +78,7 @@ what their final score is, along with their score multiplier bonus.
 
 ![User Story 6](/screenshots/user-6.png)
 
-The overal time taken for the user to finish the game is displayed on the Game Completed screen. On the first screen the user is made aware 
+The overall time taken for the user to finish the game is displayed on the Game Completed screen. On the first screen the user is made aware 
 of a score multiplier bonus they can receive if they finish in a faster time. This encourages users to keep coming back to beat their best score.
 
 ##### User 7 
@@ -94,10 +95,23 @@ Once the game is completed, the user is shown a screen with all of their achieve
 
 #### Wireframe Designs
 
-The following wireframe designs were created before the project began. They were a great way to experiment with different designs and layouts for the landing page and the card 
-game layout. The final design is shown below to keep the UX as simple as possible to make it accessible and useable by a wide range of people of all ages. 
+The following wireframe designs were created before the project began. They were a great way to experiment with different designs and 
+layouts for the landing page and the card game layout. The final design is shown below to keep the UX as simple as possible to make it 
+accessible and useable by a wide range of people of all ages. 
 
-Instructions are shown on the left hand sign, making them the most likely to be read first. Large fonts are given to the headings of each paragraph to draw attention on first visit to the page.
+![Landing page wireframe](/wireframes/landing-page-wireframe.png)
+
+Instructions are shown on the left-hand sign, making them the most likely to be read first. Large fonts are given to the 
+headings of each paragraph to draw attention on first visit to the page. The colours are keeping with the black and gold theme
+I had in mind at the start of the project to go with the Hollywood glamourous theme. The moving background it subtle enough so that
+it doesn't draw attention away from any of the instructions or cards themselves. 
+
+The instructions are written simply with no unnecessarily complicated language so that anybody can go to the site and understand the 
+game. The headers are purposefully made larger than the text underneath to group sections together.
+
+
+![Game completed wireframe](/wireframes/game-completed-wireframe.png)
+
 
 #### Features
 
@@ -105,19 +119,19 @@ This is a simple card memory trivia game. There is only one webpage created to c
 will benefit from being able to have everything given to them on one page. There are no requirement to have more than one page because the purpose of this website is the 
 memory game only. 
 
-When the user successfully matches a pair of cards, both of those card will stay turned over. If two cards aren't matched, they will both turn over back to their original 
+When the user successfully matches a pair of cards, both of those cards will stay turned over. If two cards aren't matched, they will both turn over back to their original 
 state. This process continues until all pairs are matched.
 
 The cards were designed by myself. I googled images of the films I wanted to use. A list of all of the websites I got the images from are detailed below, along with 
 all other sources. I then used Microsoft Publisher to create the card design. I wanted to have a black/dark and gold theme throughout. These colours were chosen to give a 
-Oscar Awards colour palette. The card backs themsleves are coloured in the same black and gold theme, with stars featured on each card to represent or remind the user 
+Oscar Awards colour palette. The card backs themselves are coloured in the same black and gold theme, with stars featured on each card to represent or remind the user 
 of Celebrity Stars, or the starts on the Hollywood Walk of Fame, keeping within the movie theme. The backs of the cards are identical for obvious reasons, to ensure that the user 
 isn't able to tell each card apart.
 
 The background is as well kept a dark colour, along with twinkling stars and moving gold/red clouds. 
 This wasn't created by myself, I have given the original source link at the bottom of this README file, but I felt that it suited the game perfectly with the colour/stars theme.
 
-In the orignal designs there was only a 'Time' and 'Score' tracker. In the final version I have also included how many matches have been made to let the user see at a glance 
+In the original designs there was only a 'Time' and 'Score' tracker. In the final version I have also included how many matches have been made to let the user see at a glance 
 how many they have successfully matched, instead of having to count them manually. 
 
 The 'Time' tracker is initiated when the user clicks on the first card. It then counts up until the user has matched all of the cards. At the end of the game another 
@@ -126,7 +140,7 @@ were made, what score multiplier they received based on their time, and a button
 
 #### Features Left to Implement
 
-Unfortunately due to time restrictions to complete the project, I was unable to create a feature that allows the user to choose a difficulty setting. However I do plan to 
+Unfortunately, due to time restrictions to complete the project, I was unable to create a feature that allows the user to choose a difficulty setting. However, I do plan to 
 add this feature in the future. Once the button is clicked, the cards shown on the screen will increase and decrease depending on the setting chosen.
 The feature will give the user three options: 
 Easy - 8 cards on display making four possible matches.
@@ -134,7 +148,7 @@ Medium - 12 cards on display making six possible matches.
 Hard - 16 cards making eight possible matches.
 
 These settings would be displayed underneath the instructions and respond to the user clicking on each one. This would also allow the user to earn a bigger score 
-mulitplier, Easy being the lowest reward and Hard being the highest.
+multiplier, Easy being the lowest reward and Hard being the highest.
 
 There will also be a 'Top Score' feature, showing the user their previous top score event after exiting the game. This will be displayed above the cards, as well as on the 
 game completed screen. This feature will to introduced to encourage the users to return to try and beat their previous score.
@@ -188,7 +202,7 @@ The project was deployed to GitHub Pages using the following steps...
 
 - Card flip code - https://codepen.io/jacoboakley/pen/ZpRbqB
 
-- Various snipets of code - https://w3schools.com
+- Various snippets of code - https://w3schools.com
 
 
 ##### Images for the cards
