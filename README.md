@@ -22,23 +22,26 @@ The game is kept simple by only having up to eight possible matches. To increase
 This will start when the player turns over their first card. I have notified the player of this timer so they are aware of the multiplier.
 
 At the end of the game the user will be shown another screen detailed how many matches they have made, out of a possible 8, as well as their time taken and what score multiplier they recieved. 
-There is a button for the user to reset the game. 
+There is a button for the user to reset the game which will also reset all of their scores. matches and time.
 
 
 ##### User 1
 
-> 'This is the first time I have visited this website and I don't know what it is.'
+>This is the first time I have visited this website and I don't know what it is.
+
+![User Story 1](/screenshots/user-1.png)
+
 
 ##### User 2
 
-> 'I have never played a card matching game before and I don't know the rules.'
+>I have never played a card matching game before and I don't know the rules.
 
 This is addressed by the simple layout of the landing page. The instructions are displayed immediately on the left hand side of the page. Where the user is
 most likely to start reading from. The instructions are written in a simple way and not using complex language to that a wide range of age groups can play.
 
 ##### User 3
 
-> 'I have played a card matching game and I want to try and complete the one on this website.'
+>I have played a card matching game and I want to try and complete the one on this website.
 
 This user can easily begin a game by clicking on any of the cards. This will then start the game. If the user feel likes that have wasted time trying 
 to work out what to do without reading the instructions they can then restart the game using the Restart button. This was also reshuffle the cards to create a new
@@ -46,23 +49,21 @@ unique game each time.
 
 ##### User 4
 
->'I have played a card matching game but I am looking for something that is more of a challenge compared to just matching two pairs.'
-
-
-
-
+>I have played a card matching game but I am looking for something that is more of a challenge compared to just matching two pairs.
 
 
 ##### User 5
 
->'I have played this game before and I remember that my previous score was 800, I want to be able to try and beat that score.'
+>I have played this game before and I remember that my previous score was 800, I want to be able to try and beat that score.
 
 
 ##### User 6
 
->'I have beaten the games times within different time limits but want to try and get a better time.'
+>I have beaten the games times within different time limits but want to try and get a better time.
 
+##### User 7 
 
+>I have completed the game and went to restart and have another go
 
 #### Wireframe Designs
 
