@@ -111,7 +111,7 @@ function shuffle() {
 
 
 
-//Timer Function taken from Stack Overflow
+//Timer Function https://kiran6248.github.io/MS2-PokemonGo/
 var time = 0;
 var timer;
 var minutes;

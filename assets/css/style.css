@@ -115,7 +115,7 @@
 }
  .game-info-container {
      grid-column: 1/-1;
-     display: flex;
+     display: flex; 
      justify-content: space-between;
 }
 
@@ -320,4 +320,3 @@
      -webkit-animation:move-clouds-back 200s linear infinite;
      animation:move-clouds-back 200s linear infinite;
 }
- 
