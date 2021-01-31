@@ -110,7 +110,7 @@
      margin-left: auto;
      margin-right: auto;
      margin-bottom: 20px;
-     perspective: 500px;
+     perspective: 1000px;
      padding-top: 10px;
 }
  .game-info-container {
@@ -143,7 +143,7 @@
      margin-right: auto;
      border: 1px solid #FFDA66;
      border-radius: 20px;
-     transition: transform 1s;
+     transition: transform 1.2s;
      transform-style: preserve-3d;
 }
  .card-front, .card-back {
@@ -222,8 +222,8 @@
          width: 90%;
     }
 }
-/* Moving Stars Background */
-/* ============================================================================================== SED Innovations https://sed.am https://mkrtchyan.ga ================================================================================================= */
+/* Moving Stars Background taken from https://codepen.io/stealy/pen/zYxXpza*/
+/* SED Innovations https://sed.am https://mkrtchyan.ga  */
  @keyframes move-twink-back {
      from {
          background-position:0 0;
