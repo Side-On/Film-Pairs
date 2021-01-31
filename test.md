@@ -19,20 +19,22 @@ It is presented in a table to clearly show what was being tested, how it was bei
 
 
 
-## TEsting the game
-|Test | How | Result | Fix |
+## Testing the game
+|Test | How | Result | Fix | Code Used |
 |-----|-----| -------|-----|
-| Card flip  | Click on one of the cards | The card did not flip over   |     |
-| Start timer when card is clicked  |   |    |             |
-| Match made  |   |    |             |
-| Score  |   |    |             |
-| Reshuffle button  |   |    |             |
-| Score reset |   |    |             |
+| Card flip  | Click on a card | The card did not flip over   | The card was not correctly being picked up with document.getelementbyclassname| I replaced it with the variable: var cards = document.querySelectorAll(".card");|
+| Start timer | Click on a card  |  The timer didn't start  | The timer function wasn't being called with the flipCard function        | startTimer(); inside the flipCard() function |
+| Match made  |  Match a pair |  The match 0/8 didn't change  | The code wasn't recognising that a pair was matched. There was no dataset set within the card div | index.html: data-framework="terminator". JS: if (firstCard.dataset.framework === secondCard.dataset.framework) { matchCounter();}
+| Score  | Check score increases on pair match  | The score currently went up     |     N/A        | N/A |
+|Total Score | Check total score displated correctly | The total score stayed on "0" | The code was not recognising the timer and taking that into account with the final score due to calling on the wrong variable | if (time >= 56) {totalScore.innerHTML = score * 1; timeBonus.innerHTML = "x1"; }. This statement was used to give other time bonus based on the 'time' variable, not the 'timer' variable |
+| Reshuffle button  | Click the Reshuffle button  | The cards did reshuffle, but stayed face up | N/A            | N/A |
+|Card staying face up | Click reshuffle button  | The cards stayed face up    | The issue was the flipCard() function wasn't being called on each individual card| var i;for (i = 0; i < cards.length; i++) {if (cards[i].classList.contains("flip")) {cards[i].classList.remove("flip");}} This made sure the function went through each card individually to check if it had the .flip class|
+| Shuffle on page load | Reload the webpage | The cards were not shuffled | I realised I had not placed a function onto the page itself, itself of the JS file | var cards = document.querySelectorAll(".card"); cards.forEach(card => {var shuffleCards = Math.floor(Math.random() * 12);card.style.order = shuffleCards;}); |
+| Score reset | Complete game and press reset cards  |  The score showed "0", but on next pair it increased to over the original amount  |             |
 | Time reset  |   |    |             |
 | Matches reset |   |    |             |
 | Score multiplier  |   |    |             |
 | Incorrect match  |   |    |             |
 | Correct match  |   |    |             |
-| Game complete  |   |    |             |
-|   |   |    |             |
+| Game complete  |   |    |             | 
 | Card flip  |   |    |             |
