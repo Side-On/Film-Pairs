@@ -37,3 +37,21 @@ It is presented in a table to clearly show what was being tested, how it was bei
 | Incorrect match  | Match incorrect pair | Both cards flipped back over   | N/A             | N/A |
 | Correct match  | Match correct pair | Both cards stayed flipped over    | N/A             | N/A |
 | Game complete  | Match all correct pairs   | Game completed overlay displayed |  N/A            | 
+
+## Validator test
+
+### CSS 
+![CSS Validator](/validators/css-validators.png)
+
+Passed all tests without any errors. CSS text was then put through a CSS formatter - https://www.cleancss.com/css-beautify/
+
+### HTML
+![HTML Validator](/validators/html-validator-results.png)
+
+Passed all tests without any errors. HTML text passed through HTML formatter - https://www.freeformatter.com/html-formatter.html
+
+### JavaScript
+![JavaScript](/validators/javascript-errors.png)
+Failed with an unused variable restartGame. This was a variable created in the early stages and was incorporated into the reshuffle function. 
+JavaScript then passed through a JavaScript formatter - 
+
