@@ -7,28 +7,18 @@ var secondCard;
 var lockBoard = false;
 var timerOn = true;
 
-/* Card flip function */
-function flipCard() {
 
-    if (timerOn === true) {
-        startTimer();
-        timerOn = false;
+function flipCard(event){
+	var element = event.currentTarget;
+	if (element.className === "card") {
+    if(element.style.transform == "rotateY(180deg)") {
+      element.style.transform = "rotateY(0deg)";
     }
-    if (lockBoard) return;
-    if (this === firstCard) return;
-
-    this.classList.add("flip");
-
-    if (!cardFlipped) {
-        cardFlipped = true;
-        firstCard = this;
-        return;
+    else {
+      element.style.transform = "rotateY(180deg)";
     }
-
-    secondCard = this;
-    lockBoard = true;
-    checkMatch();
-}
+  }
+};
 
 //Check if the selected cards match
 function checkMatch() {
