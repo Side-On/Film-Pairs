@@ -15,7 +15,7 @@ It is presented in a table to clearly show what was being tested, how it was bei
 | Background animation  | Check the the code used for the background works  | The clouds and stars were working correctly, however there were errors on the console in Chrome indication that they were coming from an insecure http server   | I downloaded the images and put them into the directory so that they were being taken from there instead| N/A |
 | Shuffle the Cards button | Check that the button was working correctly  | The button worked correctly after the JavaScript function was written, see below for testing and results | N/A  |
 | Card images | Check that the cards were displaying properly  | Some of the cards were not loading | Added alt text to the cards in case the cards did not load (this appeared to be occasional and with no clear reason). Checked the file location and it was fine | N/A |
-| Card sizes | Change resolution |  The cards were being pushed against each other  | Changed @media rule so that the cards changed size (but stayed in the correct ratio)| @media (max-width:705px) {.card {height: 90px; width: 75px;}} |
+| Card size | Change resolution |  The cards were being pushed against each other  | Changed @media rule so that the cards changed size (but stayed in the correct ratio)| @media (max-width:705px) {.card {height: 90px; width: 75px;}} |
 
 
 
@@ -23,17 +23,16 @@ It is presented in a table to clearly show what was being tested, how it was bei
 |Test | How | Result | Fix |
 |-----|-----| -------|-----|
 | Card flip  | Click on one of the cards | The card did not flip over   |     |
-
-| Card flip  |   |    |             |
-| Card flip  |   |    |             |
-| Card flip  |   |    |             |
-| Card flip  |   |    |             |
-| Card flip  |   |    |             |
-| Card flip  |   |    |             |
-| Card flip  |   |    |             |
-| Card flip  |   |    |             |
-| Card flip  |   |    |             |
-| Card flip  |   |    |             |
-| Card flip  |   |    |             |
-| Card flip  |   |    |             |
+| Start timer when card is clicked  |   |    |             |
+| Match made  |   |    |             |
+| Score  |   |    |             |
+| Reshuffle button  |   |    |             |
+| Score reset |   |    |             |
+| Time reset  |   |    |             |
+| Matches reset |   |    |             |
+| Score multiplier  |   |    |             |
+| Incorrect match  |   |    |             |
+| Correct match  |   |    |             |
+| Game complete  |   |    |             |
+|   |   |    |             |
 | Card flip  |   |    |             |
