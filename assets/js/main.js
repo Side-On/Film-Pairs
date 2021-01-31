@@ -143,10 +143,6 @@ function gameCompleted() {
         document.getElementById("game-completed-overlay").style.display = "block";
     }
 }
-// Refreshes the web page 
-function restartGame() {
-    location.reload();
-}
 
 // Function to add active status to the difficulty button
 var buttons = document.getElementsByClassName("difficulty-button");
