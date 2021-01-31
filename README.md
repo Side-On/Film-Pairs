@@ -111,6 +111,8 @@ it doesn't draw attention away from any of the instructions or cards themselves.
 The instructions are written simply with no unnecessarily complicated language so that anybody can go to the site and understand the 
 game. The headers are purposefully made larger than the text underneath to group sections together.
 
+A favicon was also added so that the user can clearly see the 'F' (for Film) icon on their browser tabs.
+
 ##### Game completed page design
 
 ![Game completed wireframe](/wireframes/completed-game-wireframe.png)
