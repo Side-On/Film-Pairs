@@ -3,7 +3,7 @@ var cards = document.querySelectorAll(".card");
 var cardFlipped = false;
 var firstCard;
 var secondCard;
-var lockBoard = false;
+var lockCards = false;
 var timerOn = false;
 
 /* Card flip function */
@@ -15,7 +15,8 @@ function startGame() {
             cards[i].classList.remove("flip");
         }
     }
-
+    //This adds a delay between the cards being flipped back to their original state so the user doesn't see that cards being moved halfway
+    //through the flip
     var delay = 1000;
     setTimeout(function() {
         shuffle();
@@ -28,14 +29,15 @@ function startGame() {
 }
 
 function flipCard() {
-
+    //Starts the timer when the first card is flipped
     if (timerOn === false) {
         startTimer();
         timerOn = true;
     }
-    if (lockBoard) return;
+    //Stop the first card flipping over if it is flipped again
+    if (lockCards) return;
     if (this === firstCard) return;
-
+    //Adds a class that rotates the clicked card
     this.classList.add("flip");
 
     if (!cardFlipped) {
@@ -43,11 +45,15 @@ function flipCard() {
         firstCard = this;
         return;
     }
-
+    //Creates the second card that is clicked
     secondCard = this;
-    lockBoard = true;
+    lockCards = true;
+    //Initiates the checkMatch function to see if the cards are the same
     checkMatch();
 }
+
+//This is to add an event listener for any cards that are clicked on
+cards.forEach(card => card.addEventListener("click", flipCard));
 
 //Check if the selected cards match
 function checkMatch() {
@@ -58,37 +64,40 @@ function checkMatch() {
         return;
 
     }
+    //if they are not the same, the cards are then flipped back over
     unFlipCards();
 
 }
 
-//Disables the cards that have been selected so they cannot be selected again
+//Disables the cards that have been selected so they cannot be clicked again
 function disableCards() {
     firstCard.removeEventListener("click", flipCard);
     secondCard.removeEventListener("click", flipCard);
     resetBoard();
 }
 
+//This function is for when a new game is started and the previously matches cards cannot be clicked again
 function enableCards() {
     cards.forEach(card => card.addEventListener("click", flipCard));
 }
 
 
+//If the two cards clicked aren't the same, they will be flipped back over
 function unFlipCards() {
 
-    lockBoard = true;
+    lockCards = true;
 
     setTimeout(function() {
         firstCard.classList.remove("flip");
         secondCard.classList.remove("flip");
         resetBoard();
-        lockBoard = false;
+        lockCards = false;
     }, 1500);
 }
 
-//Resets the board
+//Resets the board so that the clicked cards can be clicked again, reset the variables back to null
 function resetBoard() {
-    [cardFlipped, lockBoard] = [false, false];
+    [cardFlipped, lockCards] = [false, false];
     [firstCard, secondCard] = [null, null];
 }
 
@@ -98,12 +107,11 @@ function shuffle() {
         var shuffleCards = Math.floor(Math.random() * 16);
         card.style.order = shuffleCards;
     });
-};
+}
 
-cards.forEach(card => card.addEventListener("click", flipCard));
 
-//Timer Function
 
+//Timer Function taken from Stack Overflow
 var time = 0;
 var timer;
 var minutes;
@@ -118,15 +126,17 @@ function startTimer() {
     }, 1000);
 }
 
-
+//This function stops the timer when the user completes the game
 function stopTimer() {
     clearInterval(timer);
 }
 
+//This function resets the timer when the user presses either the Shuffle the Cards button or the close and play again
 function resetTime() {
     document.getElementById("timer").innerHTML = "00:00";
     time = 0;
     timerOn = false;
+    //Resets the timer variable to 0
     clearInterval(timer);
 }
 
@@ -140,7 +150,7 @@ var timeBonus = document.getElementById("time-bonus");
 function currentScore() {
     score = score + 100;
     scoreKeeper.innerHTML = score;
-
+    //These statements determine the score multiplier the player will get at the end of the game
     if (time >= 56) {
         totalScore.innerHTML = score * 1;
         timeBonus.innerHTML = "x1";
@@ -160,6 +170,7 @@ function currentScore() {
 
 }
 
+//This function resets the score when the user presses either the Shuffle the Cards button or the close and play again
 function resetScore() {
     if (scoreKeeper !== "0") {
         score = 0;
@@ -167,13 +178,15 @@ function resetScore() {
     }
 }
 
+
+//Checks how many matches have been made when the user is playing
 var match = 0;
 var matchesMade = document.getElementById("matches-made");
 
 function matchCounter() {
     match++;
     matchesMade.innerHTML = match;
-
+    //Sets the amount of matches needed to end the game
     if (match == 8) {
 
         var timeFinished = document.getElementById("timer").innerHTML;
@@ -182,10 +195,11 @@ function matchCounter() {
         document.getElementById("time-taken").innerHTML = timeFinished;
         document.getElementById("matches-completed").innerHTML = completeMatches;
         document.getElementById("game-completed-overlay").style.display = "block";
+        //Stops the timer when all the matches are made
         stopTimer();
     }
 }
-
+//This function resets the matches when the user presses either the Shuffle the Cards button or the close and play again
 function resetMatches() {
     if (matchesMade !== "0") {
         match = 0;
