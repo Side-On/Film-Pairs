@@ -232,4 +232,13 @@ The project was deployed to GitHub Pages using the following steps...
 - Quotes ideas - https://www.thrillist.com/entertainment/nation/best-movie-quotes
 
 
+#### Code used
 
+- https://kiran6248.github.io/MS2-PokemonGo/ This was used for the timer function within the game. It was similar to what I had previously written, however gave a better way of keeping track of time during the card flips, 
+as well as being able to reset the timer when the game was restarted
+
+- https://stackoverflow.com/ was used for various pieces of code, as well as to compare my code with others to help troubleshoot
+
+- https://www.w3schools.com/ was used similarly to stackoverflow where sample pieces of code were used for some functions, as well as html and css troubleshooting.
+
+All of the content was written by myself, the cards were designed and created by myself. The images were taken from various websites detailed about. 
