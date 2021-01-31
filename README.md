@@ -31,10 +31,14 @@ There is a button for the user to reset the game which will also reset all of th
 
 ![User Story 1](/screenshots/user-1.png)
 
+This is the first and only page the user sees. The design idea was keep everything as simple as possible, so all of the attention is on the game itself.
+The heading tells the user exactly what the website it, that is it a memory game.
 
 ##### User 2
 
 >I have never played a card matching game before and I don't know the rules.
+
+![User Story 2](/screenshots/user-2.png)
 
 This is addressed by the simple layout of the landing page. The instructions are displayed immediately on the left hand side of the page. Where the user is
 most likely to start reading from. The instructions are written in a simple way and not using complex language to that a wide range of age groups can play.
@@ -43,27 +47,50 @@ most likely to start reading from. The instructions are written in a simple way 
 
 >I have played a card matching game and I want to try and complete the one on this website.
 
-This user can easily begin a game by clicking on any of the cards. This will then start the game. If the user feel likes that have wasted time trying 
-to work out what to do without reading the instructions they can then restart the game using the Restart button. This was also reshuffle the cards to create a new
-unique game each time.
+![User Story 3](/screenshots/user-3.png)
+
+This user can easily begin a game by clicking on any of the cards. This will then start the game and the timer. If the user feel likes that have wasted time trying 
+to work out what to do without reading the instructions they can then restart the game using the Shuffle the Cards button.
 
 ##### User 4
 
 >I have played a card matching game but I am looking for something that is more of a challenge compared to just matching two pairs.
+
+![User Story 4](/screenshots/user-4.png)
+
+This game has been created from mixing both trivia and card matching games. The idea is to bring them both together with both very famous and also 
+specific movie quotes. 
 
 
 ##### User 5
 
 >I have played this game before and I remember that my previous score was 800, I want to be able to try and beat that score.
 
+![User Story 5](/screenshots/user-5.png)
+
+The user can easily see their current score throughout the game. They are also presented with a screen at the end of the game to tell them
+what their final score is, along with their score multiplier bonus. 
 
 ##### User 6
 
 >I have beaten the games times within different time limits but want to try and get a better time.
 
+![User Story 6](/screenshots/user-6.png)
+
+The overal time taken for the user to finish the game is displayed on the Game Completed screen. On the first screen the user is made aware 
+of a score multiplier bonus they can receive if they finish in a faster time. This encourages users to keep coming back to beat their best score.
+
 ##### User 7 
 
 >I have completed the game and went to restart and have another go
+
+![User Story 7](/screenshots/user-7.png)
+
+Once the game is completed, the user is shown a screen with all of their achievements, including: 
+- Matches made
+- Time completed
+- Score
+- Total Score
 
 #### Wireframe Designs
 
