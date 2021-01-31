@@ -99,6 +99,8 @@ The following wireframe designs were created before the project began. They were
 layouts for the landing page and the card game layout. The final design is shown below to keep the UX as simple as possible to make it 
 accessible and useable by a wide range of people of all ages. 
 
+##### Landing page design
+
 ![Landing page wireframe](/wireframes/landing-page-wireframe.png)
 
 Instructions are shown on the left-hand sign, making them the most likely to be read first. Large fonts are given to the 
@@ -109,9 +111,15 @@ it doesn't draw attention away from any of the instructions or cards themselves.
 The instructions are written simply with no unnecessarily complicated language so that anybody can go to the site and understand the 
 game. The headers are purposefully made larger than the text underneath to group sections together.
 
+##### Game completed page design
 
 ![Game completed wireframe](/wireframes/completed-game-wireframe.png)
 
+This appears when the user matches the correct amount of pairs. It will show all of the achievements the user has at the end of the game.
+It will display the users: score, complete time, time bonus, how many pairs matched, score in game and total score. 
+There is a button at the bottom of the screen which allows the user to close the window and restart the game.
+
+Upon restarting the game, all of the final score and times will be reset back to zero and the cards will be reshuffled.
 
 #### Features
 
@@ -151,7 +159,7 @@ These settings would be displayed underneath the instructions and respond to the
 multiplier, Easy being the lowest reward and Hard being the highest.
 
 There will also be a 'Top Score' feature, showing the user their previous top score event after exiting the game. This will be displayed above the cards, as well as on the 
-game completed screen. This feature will to introduced to encourage the users to return to try and beat their previous score.
+game completed screen. This feature will be introduced to encourage the users to return in an effort to try and beat their previous score.
 
 #### Technologies used
 
