@@ -79,7 +79,7 @@ what their final score is, along with their score multiplier bonus.
 ![User Story 6](/screenshots/user-6.png)
 
 The overall time taken for the user to finish the game is displayed on the Game Completed screen. On the first screen the user is made aware 
-of a score multiplier bonus they can receive if they finish in a faster time. This encourages users to keep coming back to beat their best score.
+of a score multiplier bonus, they can receive if they finish in a faster time. This encourages users to keep coming back to beat their best score.
 
 ##### User 7 
 
@@ -235,10 +235,10 @@ The project was deployed to GitHub Pages using the following steps...
 #### Code used
 
 - https://kiran6248.github.io/MS2-PokemonGo/ This was used for the timer function within the game. It was similar to what I had previously written, however gave a better way of keeping track of time during the card flips, 
-as well as being able to reset the timer when the game was restarted
+as well as being able to reset the timer when the game was restarted. In the user’s code comments they state that the code was taken from stackoverflow, however there is no link provided for me to give.
 
 - https://stackoverflow.com/ was used for various pieces of code, as well as to compare my code with others to help troubleshoot
 
 - https://www.w3schools.com/ was used similarly to stackoverflow where sample pieces of code were used for some functions, as well as html and css troubleshooting.
 
-All of the content was written by myself, the cards were designed and created by myself. The images were taken from various websites detailed about. 
+All of the content was written by myself, the cards were designed and created by myself. The images were taken from various websites detailed about.
